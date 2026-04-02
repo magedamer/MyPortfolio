@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maged Ahmed — Backend Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Maged Ahmed — Senior Backend Developer</title>
+<!-- Favicon / Website Tab Icon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8ef7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8ef7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -14,136 +18,128 @@
   --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
   --text:#f0f4ff;--text2:#8b95b0;--text3:#4a5470;
   --glow:rgba(79,142,247,0.15);
+  --gradient-1: linear-gradient(135deg, #4f8ef7 0%, #a78bfa 100%);
+  --gradient-2: linear-gradient(135deg, #00e5a0 0%, #4f8ef7 100%);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;cursor:default}
 
-.blob{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
-.blob1{width:600px;height:600px;background:rgba(79,142,247,0.07);top:-200px;right:-200px}
-.blob2{width:500px;height:500px;background:rgba(0,229,160,0.05);bottom:-100px;left:-150px}
-.blob3{width:300px;height:300px;background:rgba(167,139,250,0.06);top:50%;left:50%}
+/* animated background particles */
+.blob{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;animation: float 20s infinite ease-in-out}
+.blob1{width:600px;height:600px;background:rgba(79,142,247,0.07);top:-200px;right:-200px;animation-delay:0s}
+.blob2{width:500px;height:500px;background:rgba(0,229,160,0.05);bottom:-100px;left:-150px;animation-delay:5s}
+.blob3{width:300px;height:300px;background:rgba(167,139,250,0.06);top:50%;left:50%;animation-delay:10s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 5vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(5,8,16,0.85);backdrop-filter:blur(20px)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-0.5px;color:var(--text)}
-.nav-logo span{color:var(--accent)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 5vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(5,8,16,0.85);backdrop-filter:blur(20px);transition:all .3s}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-0.5px;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-logo span{background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.78rem;font-weight:500;color:var(--text2);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;font-family:'DM Mono',monospace}
-.nav-links a:hover{color:var(--accent2)}
-.nav-cta{background:transparent;color:var(--accent);padding:.5rem 1.2rem;border-radius:6px;font-size:.8rem;font-weight:500;text-decoration:none;border:1px solid var(--accent);transition:all .2s;font-family:'DM Mono',monospace}
-.nav-cta:hover{background:var(--accent);color:#fff;box-shadow:0 0 20px rgba(79,142,247,0.3)}
+.nav-links a{font-size:.78rem;font-weight:500;color:var(--text2);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;font-family:'DM Mono',monospace;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--accent2);transition:width .3s}
+.nav-links a:hover{color:var(--accent2)}.nav-links a:hover::after{width:100%}
+.nav-cta{background:rgba(79,142,247,0.1);color:var(--accent);padding:.5rem 1.3rem;border-radius:50px;font-size:.8rem;font-weight:500;text-decoration:none;border:1px solid rgba(79,142,247,0.3);transition:all .3s;font-family:'DM Mono',monospace;backdrop-filter:blur(5px)}
+.nav-cta:hover{background:var(--accent);color:#fff;box-shadow:0 0 20px rgba(79,142,247,0.5);transform:translateY(-2px)}
 
-/* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:8rem 5vw 5rem;position:relative;z-index:1}
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
 .hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:2rem;flex-wrap:wrap}
-.eyebrow-line{width:40px;height:1px;background:var(--accent);flex-shrink:0}
+.eyebrow-line{width:40px;height:2px;background:var(--gradient-1);flex-shrink:0}
 .eyebrow-text{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase}
-.avail-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:50px;padding:.35rem .9rem;font-size:.72rem;font-weight:500;color:var(--accent2);margin-left:auto}
-.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,229,160,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(0,229,160,0)}}
+.avail-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:50px;padding:.35rem .9rem;font-size:.72rem;font-weight:500;color:var(--accent2);margin-left:auto;backdrop-filter:blur(4px)}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,229,160,.6)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(0,229,160,0)}}
 h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3rem,5vw,4.5rem);line-height:1.0;letter-spacing:-3px;margin-bottom:.5rem}
-h1 .name{background:linear-gradient(135deg,var(--text) 0%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1 .name{background:linear-gradient(135deg,var(--text) 0%,var(--accent) 80%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 h1 .role{color:var(--text2);font-size:clamp(1.5rem,2.5vw,2rem);display:block;margin-top:.4rem;letter-spacing:-1px;font-weight:700}
-.hero-desc{font-size:1rem;color:var(--text2);line-height:1.9;margin:1.8rem 0 2.5rem;font-weight:300;max-width:500px}
+.hero-desc{font-size:1rem;color:var(--text2);line-height:1.9;margin:1.8rem 0 2.5rem;font-weight:300;max-width:500px;border-left:2px solid var(--accent);padding-left:1.5rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-glow{background:var(--accent);color:#fff;padding:.85rem 2rem;border-radius:8px;font-size:.88rem;font-weight:500;text-decoration:none;transition:all .25s;box-shadow:0 0 30px rgba(79,142,247,0.25);display:inline-block}
-.btn-glow:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(79,142,247,0.4)}
-.btn-ghost{background:transparent;color:var(--text);padding:.85rem 2rem;border-radius:8px;font-size:.88rem;font-weight:500;text-decoration:none;transition:all .25s;border:1px solid var(--border2);display:inline-block}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn-glow{background:var(--gradient-1);color:#fff;padding:.85rem 2rem;border-radius:50px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 0 20px rgba(79,142,247,0.3);display:inline-block;border:none}
+.btn-glow:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(79,142,247,0.5)}
+.btn-ghost{background:transparent;color:var(--text);padding:.85rem 2rem;border-radius:50px;font-size:.88rem;font-weight:500;text-decoration:none;transition:all .3s;border:1px solid var(--border2);display:inline-block;backdrop-filter:blur(5px)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);background:rgba(79,142,247,0.05)}
 .hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);flex-wrap:wrap}
-.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;line-height:1;background:linear-gradient(135deg,var(--text),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;line-height:1;background:var(--gradient-2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{font-size:.72rem;color:var(--text3);margin-top:.4rem;text-transform:uppercase;letter-spacing:1px;font-family:'DM Mono',monospace}
 
-/* HERO CARD */
-.hero-card{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:2rem;position:relative;overflow:hidden}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
-.hc-avatar{width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:1.5rem}
+.hero-card{background:rgba(19,25,41,0.8);border:1px solid var(--border2);border-radius:24px;padding:2rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);transition:all .3s}
+.hero-card:hover{transform:translateY(-5px);border-color:rgba(79,142,247,0.3);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient-1)}
+.hc-avatar{width:80px;height:80px;border-radius:20px;background:var(--gradient-1);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:1.5rem;box-shadow:0 10px 20px rgba(79,142,247,0.2)}
 .hc-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:.2rem}
 .hc-role{font-size:.82rem;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:1.5rem}
 .hc-divider{height:1px;background:var(--border);margin:1.5rem 0}
 .hc-info{display:flex;flex-direction:column;gap:.8rem}
-.hc-row{display:flex;align-items:center;gap:.8rem;font-size:.82rem}
-.hc-icon{width:28px;height:28px;border-radius:7px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
-.hc-val{color:var(--text2);word-break:break-all}
-.hc-val a{color:var(--accent);text-decoration:none}
-.hc-val a:hover{text-decoration:underline}
+.hc-row{display:flex;align-items:center;gap:.8rem;font-size:.82rem;transition:all .2s}
+.hc-row:hover{transform:translateX(5px)}
+.hc-icon{width:28px;height:28px;border-radius:8px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
+.hc-val{color:var(--text2)}
+.hc-val a{color:var(--accent);text-decoration:none;transition:color .2s}
+.hc-val a:hover{color:var(--accent2)}
 .hc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.5rem}
-.hc-tag{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);color:var(--accent3);padding:.25rem .65rem;border-radius:50px;font-size:.68rem;font-family:'DM Mono',monospace}
+.hc-tag{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);color:var(--accent3);padding:.25rem .65rem;border-radius:50px;font-size:.68rem;font-family:'DM Mono',monospace;transition:all .2s}
+.hc-tag:hover{background:rgba(167,139,250,0.2);transform:scale(1.02)}
 
-/* SECTION WRAPPER */
 .sec{padding:6rem 5vw;max-width:1100px;margin:0 auto;position:relative;z-index:1}
 .sec-label{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.8rem}
-.sec-label::before{content:'';width:30px;height:1px;background:var(--accent);flex-shrink:0}
-.sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-1.5px;margin-bottom:.8rem;line-height:1.1}
+.sec-label::before{content:'';width:40px;height:2px;background:var(--gradient-1);flex-shrink:0}
+.sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-1.5px;margin-bottom:.8rem;line-height:1.2}
 .sec-sub{font-size:.95rem;color:var(--text2);max-width:500px;line-height:1.8}
 
-/* EXPERIENCE */
 .exp-list{margin-top:3.5rem;display:flex;flex-direction:column}
-.exp-item{display:grid;grid-template-columns:160px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border)}
-.exp-item:last-child{border-bottom:none}
-.exp-period{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);padding-top:.3rem;line-height:1.6}
+.exp-item{display:grid;grid-template-columns:160px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:all .3s}
+.exp-item:hover{background:rgba(255,255,255,0.02);padding-left:1rem;border-radius:12px}
+.exp-period{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);padding-top:.3rem}
 .exp-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.2rem}
 .exp-company{font-size:.82rem;color:var(--accent);margin-bottom:.6rem;font-family:'DM Mono',monospace}
-.exp-current{display:inline-flex;align-items:center;gap:.3rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);color:var(--accent2);font-size:.65rem;padding:.2rem .6rem;border-radius:50px;margin-left:.6rem;font-family:'DM Mono',monospace;vertical-align:middle}
-.exp-dot{width:5px;height:5px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;display:inline-block}
+.exp-current{display:inline-flex;align-items:center;gap:.3rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);color:var(--accent2);font-size:.65rem;padding:.2rem .6rem;border-radius:50px;margin-left:.6rem}
 .exp-desc{font-size:.85rem;color:var(--text2);line-height:1.7}
 
-/* SKILLS */
-#skills-sec{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 5vw}
-.skills-inner{max-width:1100px;margin:0 auto}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:3rem}
-.sk-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:1.4rem;transition:all .25s;cursor:default}
-.sk-card:hover{border-color:var(--border2);transform:translateY(-4px);background:var(--surface2)}
+#skills-sec{background:rgba(17,24,39,0.5);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 5vw;backdrop-filter:blur(5px)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:3rem}
+.sk-card{background:rgba(17,24,39,0.6);border:1px solid var(--border);border-radius:20px;padding:1.4rem;transition:all .3s;backdrop-filter:blur(5px)}
+.sk-card:hover{border-color:rgba(79,142,247,0.4);transform:translateY(-6px);background:rgba(26,34,53,0.8);box-shadow:0 15px 30px rgba(0,0,0,0.2)}
 .sk-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}
-.sk-name{font-weight:500;font-size:.92rem;color:var(--text)}
+.sk-name{font-weight:700;font-size:.92rem;color:var(--text)}
 .sk-pct{font-family:'DM Mono',monospace;font-size:.75rem;color:var(--accent2)}
-.sk-bar-bg{background:rgba(255,255,255,0.05);border-radius:50px;height:3px;overflow:hidden;margin-bottom:.8rem}
-.sk-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.sk-bar-bg{background:rgba(255,255,255,0.05);border-radius:50px;height:4px;overflow:hidden;margin-bottom:.8rem}
+.sk-bar{height:100%;border-radius:50px;background:var(--gradient-1);width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
 .sk-sub{font-size:.68rem;color:var(--text3);font-family:'DM Mono',monospace}
 
-/* PROJECTS */
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:3rem}
-.p-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
-.p-card:hover{transform:translateY(-5px);border-color:var(--border2);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:3rem}
+.p-card{background:rgba(19,25,41,0.7);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .4s;display:flex;flex-direction:column;backdrop-filter:blur(5px)}
+.p-card:hover{transform:translateY(-8px);border-color:rgba(79,142,247,0.4);box-shadow:0 25px 40px rgba(0,0,0,0.3)}
 .p-header{padding:1.5rem 1.5rem 0;flex:1}
-.p-num{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);margin-bottom:.8rem}
-.p-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.6rem}
+.p-num{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent2);margin-bottom:.8rem;letter-spacing:1px}
+.p-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.6rem}
 .p-desc{font-size:.84rem;color:var(--text2);line-height:1.7}
-.p-footer{padding:1.2rem 1.5rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid var(--border);margin-top:1.2rem}
-.p-tag{background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.15);color:var(--accent);padding:.22rem .6rem;border-radius:5px;font-size:.67rem;font-family:'DM Mono',monospace}
-.p-gh-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--accent2);text-decoration:none;font-family:'DM Mono',monospace;padding:.3rem .7rem;border-radius:6px;border:1px solid rgba(0,229,160,.15);background:rgba(0,229,160,.05);transition:all .2s}
-.p-gh-link:hover{background:rgba(0,229,160,.1)}
+.p-footer{padding:1.2rem 1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;border-top:1px solid var(--border);margin-top:1.2rem}
+.p-tag{background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.15);color:var(--accent);padding:.22rem .6rem;border-radius:6px;font-size:.67rem;font-family:'DM Mono',monospace}
+.p-gh-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--accent2);text-decoration:none;font-family:'DM Mono',monospace;padding:.3rem .7rem;border-radius:50px;border:1px solid rgba(0,229,160,.2);background:rgba(0,229,160,.05);transition:all .2s}
+.p-gh-link:hover{background:rgba(0,229,160,.15);transform:translateX(3px)}
 
-/* TRAINING */
 .train-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:3rem}
-.tr-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:all .2s}
-.tr-card:hover{border-color:var(--border2);transform:translateY(-2px)}
-.tr-icon{width:38px;height:38px;border-radius:10px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.tr-title{font-size:.88rem;font-weight:500;color:var(--text);line-height:1.4}
-.tr-org{font-size:.75rem;color:var(--accent3);font-family:'DM Mono',monospace;margin-top:.3rem}
+.tr-card{background:rgba(19,25,41,0.6);border:1px solid var(--border);border-radius:16px;padding:1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:all .3s;backdrop-filter:blur(5px)}
+.tr-card:hover{border-color:rgba(167,139,250,0.3);transform:translateY(-3px);background:rgba(26,34,53,0.7)}
+.tr-icon{width:40px;height:40px;border-radius:12px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.tr-title{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.4}
+.tr-org{font-size:.72rem;color:var(--accent3);font-family:'DM Mono',monospace;margin-top:.3rem}
 
-/* CONTACT */
-#contact-sec{background:var(--surface);border-top:1px solid var(--border);padding:6rem 5vw}
+#contact-sec{background:linear-gradient(180deg, rgba(5,8,16,0.9) 0%, rgba(19,25,41,0.95) 100%);border-top:1px solid var(--border);padding:6rem 5vw}
 .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.contact-cards{display:flex;flex-direction:column;gap:.8rem;margin-top:2.5rem}
-.cc{display:flex;align-items:center;gap:1rem;background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;transition:all .2s;text-decoration:none}
-.cc:hover{border-color:var(--border2);transform:translateX(4px)}
-.cc-icon-box{width:40px;height:40px;border-radius:10px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
-.cc-label{font-size:.7rem;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.2rem}
-.cc-val{font-size:.88rem;font-weight:500;color:var(--text)}
-.contact-cta h3{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-1px;margin-bottom:1rem;line-height:1.2}
+.contact-cards{display:flex;flex-direction:column;gap:.8rem}
+.cc{display:flex;align-items:center;gap:1rem;background:rgba(17,24,39,0.6);border:1px solid var(--border);border-radius:16px;padding:1rem 1.2rem;transition:all .3s;text-decoration:none;backdrop-filter:blur(5px)}
+.cc:hover{border-color:rgba(79,142,247,0.5);transform:translateX(8px);background:rgba(26,34,53,0.8)}
+.cc-icon-box{width:42px;height:42px;border-radius:12px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem}
+.cc-label{font-size:.65rem;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.2rem}
+.cc-val{font-size:.88rem;font-weight:600;color:var(--text)}
+.contact-cta h3{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-1px;margin-bottom:1rem;line-height:1.2;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .contact-cta p{font-size:.95rem;color:var(--text2);line-height:1.8;margin-bottom:2rem}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);text-align:center;padding:2rem 5vw;font-size:.78rem;color:var(--text3);position:relative;z-index:1;font-family:'DM Mono',monospace}
-footer span{color:var(--accent)}
-
-/* ANIMATIONS */
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+footer{border-top:1px solid var(--border);text-align:center;padding:2rem 5vw;font-size:.75rem;color:var(--text3);font-family:'DM Mono',monospace;background:rgba(5,8,16,0.8)}
+footer span{color:var(--accent2);font-weight:600}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(0.2,0.9,0.4,1.1),transform .8s cubic-bezier(0.2,0.9,0.4,1.1)}
 .fade-up.visible{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:3rem}
   .hero-card{display:none}
@@ -159,16 +155,15 @@ footer span{color:var(--accent)}
   .sec{padding:4rem 4vw}
   #skills-sec{padding:4rem 4vw}
   #contact-sec{padding:4rem 4vw}
+  .hero-stats{gap:1.5rem}
+  .stat-num{font-size:1.8rem}
 }
 </style>
 </head>
 <body>
-
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
 <div class="blob blob3"></div>
-
-<!-- NAV -->
 <nav>
   <div class="nav-logo"><span>&lt;</span>Maged<span>/&gt;</span></div>
   <ul class="nav-links">
@@ -177,346 +172,94 @@ footer span{color:var(--accent)}
     <li><a href="#projects-sec">Projects</a></li>
     <li><a href="#contact-sec">Contact</a></li>
   </ul>
-  <a href="mailto:magedamer44@gmail.com" class="nav-cta">Hire Me</a>
+  <a href="https://wa.me/201024827469?text=Hello%20Maged%2C%20I'm%20interested%20in%20working%20with%20you." class="nav-cta" target="_blank"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i>WhatsApp Me</a>
 </nav>
-
-<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div class="fade-up">
-      <div class="hero-eyebrow">
-        <div class="eyebrow-line"></div>
-        <div class="eyebrow-text">Backend Developer · Cairo, Egypt</div>
-        <div class="avail-badge"><span class="avail-dot"></span>Open to opportunities</div>
-      </div>
-      <h1>
-        <span class="name">Maged Ahmed</span>
-        <span class="role">Backend Developer</span>
-      </h1>
-      <p class="hero-desc">
-        4+ years crafting scalable web applications and APIs. Specialized in PHP, Laravel, and multi-stack integrations — from payment gateways to cloud infrastructure.
-      </p>
-      <div class="hero-ctas">
-        <a href="#projects-sec" class="btn-glow">View My Work</a>
-        <a href="mailto:magedamer44@gmail.com" class="btn-ghost">Get In Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">4+</div>
-          <div class="stat-label">Years Exp.</div>
-        </div>
-        <div>
-          <div class="stat-num">5</div>
-          <div class="stat-label">Live Projects</div>
-        </div>
-        <div>
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Companies</div>
-        </div>
-        <div>
-          <div class="stat-num">3</div>
-          <div class="stat-label">Frameworks</div>
-        </div>
-      </div>
+      <div class="hero-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Senior Backend Developer · Cairo, Egypt</div><div class="avail-badge"><span class="avail-dot"></span>Open to opportunities</div></div>
+      <h1><span class="name">Maged Ahmed</span><span class="role">Senior Backend Developer</span></h1>
+      <p class="hero-desc">5+ years of experience crafting scalable web applications and APIs. Specialized in PHP, Laravel, microservices, cloud infrastructure (AWS), and leading complex integrations from payment gateways to real-time systems.</p>
+      <div class="hero-ctas"><a href="#projects-sec" class="btn-glow"><i class="fas fa-code"></i> View My Work</a><a href="https://wa.me/201024827469?text=Hi%20Maged%2C%20I%20saw%20your%20portfolio" class="btn-ghost" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+      <div class="hero-stats"><div><div class="stat-num">5+</div><div class="stat-label">Years Exp.</div></div><div><div class="stat-num">12+</div><div class="stat-label">Live Projects</div></div><div><div class="stat-num">5+</div><div class="stat-label">Companies</div></div><div><div class="stat-num">5+</div><div class="stat-label">Frameworks</div></div></div>
     </div>
-
     <div class="hero-card fade-up" style="transition-delay:.2s">
-      <div class="hc-avatar">MA</div>
-      <div class="hc-name">Maged Ahmed Amer</div>
-      <div class="hc-role">// back-end-developer</div>
-      <div class="hc-divider"></div>
+      <div class="hc-avatar">MA</div><div class="hc-name">Maged Ahmed Amer</div><div class="hc-role">// senior-backend-architect</div><div class="hc-divider"></div>
       <div class="hc-info">
-        <div class="hc-row">
-          <div class="hc-icon">📍</div>
-          <div class="hc-val">Cairo, Egypt</div>
-        </div>
-        <div class="hc-row">
-          <div class="hc-icon">✉️</div>
-          <div class="hc-val"><a href="mailto:magedamer44@gmail.com">magedamer44@gmail.com</a></div>
-        </div>
-        <div class="hc-row">
-          <div class="hc-icon">📞</div>
-          <div class="hc-val">+20 102 482 7469</div>
-        </div>
-        <div class="hc-row">
-          <div class="hc-icon">🐙</div>
-          <div class="hc-val"><a href="https://github.com/magedamer" target="_blank">github.com/magedamer</a></div>
-        </div>
-        <div class="hc-row">
-          <div class="hc-icon">💼</div>
-          <div class="hc-val"><a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank">LinkedIn Profile</a></div>
-        </div>
+        <div class="hc-row"><div class="hc-icon"><i class="fas fa-map-marker-alt"></i></div><div class="hc-val">Cairo, Egypt</div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fab fa-whatsapp"></i></div><div class="hc-val"><a href="https://wa.me/201024827469" target="_blank">+20 102 482 7469 (WhatsApp)</a></div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fab fa-github"></i></div><div class="hc-val"><a href="https://github.com/magedamer" target="_blank" rel="noopener">github.com/magedamer</a></div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fab fa-linkedin"></i></div><div class="hc-val"><a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" rel="noopener">LinkedIn Profile</a></div></div>
       </div>
-      <div class="hc-tags">
-        <span class="hc-tag">Laravel</span>
-        <span class="hc-tag">PHP 8</span>
-        <span class="hc-tag">CakePHP</span>
-        <span class="hc-tag">REST API</span>
-        <span class="hc-tag">MySQL</span>
-        <span class="hc-tag">AWS</span>
-      </div>
+      <div class="hc-tags"><span class="hc-tag">Laravel</span><span class="hc-tag">PHP 8</span><span class="hc-tag">Microservices</span><span class="hc-tag">AWS</span><span class="hc-tag">Redis</span><span class="hc-tag">Docker</span><span class="hc-tag">K8s</span><span class="hc-tag">MySQL</span></div>
     </div>
   </div>
 </section>
-
-<!-- EXPERIENCE -->
 <div class="sec fade-up" id="exp">
-  <div class="sec-label">Experience</div>
-  <h2 class="sec-title">Work History</h2>
-  <p class="sec-sub">5 positions across startups and product companies, building real-world applications.</p>
+  <div class="sec-label">Experience</div><h2 class="sec-title">Work History</h2><p class="sec-sub">5+ years across startups and product companies, building real-world applications.</p>
   <div class="exp-list">
-    <div class="exp-item">
-      <div class="exp-period">APR 2024 — Present</div>
-      <div class="exp-body">
-        <div class="exp-title">Full-Stack Developer <span class="exp-current"><span class="exp-dot"></span>Current</span></div>
-        <div class="exp-company">RiteVet</div>
-        <div class="exp-desc">Web application for veterinarian services built with CakePHP, Laravel, and Stripe payment gateway integration.</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-period">JAN 2024 — MAY 2024</div>
-      <div class="exp-body">
-        <div class="exp-title">Full-Stack Developer</div>
-        <div class="exp-company">OnCall</div>
-        <div class="exp-desc">Contributed to on-demand service platform development with Laravel and API-first architecture.</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-period">NOV 2022 — DEC 2023</div>
-      <div class="exp-body">
-        <div class="exp-title">Back-End Developer</div>
-        <div class="exp-company">ANMAT</div>
-        <div class="exp-desc">Built ERP systems using Native PHP, Laravel, and SQL Server for private enterprise clients.</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-period">FEB 2022 — NOV 2022</div>
-      <div class="exp-body">
-        <div class="exp-title">Back-End Developer</div>
-        <div class="exp-company">Aiwa Group</div>
-        <div class="exp-desc">Developed a freelancer-style mobile app backend using CakePHP, REST API, and Fawry payment integration.</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-period">OCT 2021 — FEB 2022</div>
-      <div class="exp-body">
-        <div class="exp-title">Back-End Developer</div>
-        <div class="exp-company">Mot Company</div>
-        <div class="exp-desc">Worked on backend services and API development for web and mobile products.</div>
-      </div>
-    </div>
+    <div class="exp-item"><div class="exp-period">APR 2024 — Present</div><div class="exp-body"><div class="exp-title">Full-Stack Developer <span class="exp-current"><span class="avail-dot" style="width:5px;height:5px;"></span>Current</span></div><div class="exp-company">RiteVet</div><div class="exp-desc">Web application for veterinarian services built with CakePHP, Laravel, and Stripe payment gateway integration.</div></div></div>
+    <div class="exp-item"><div class="exp-period">JAN 2024 — MAY 2024</div><div class="exp-body"><div class="exp-title">Full-Stack Developer</div><div class="exp-company">OnCall</div><div class="exp-desc">Contributed to on-demand service platform development with Laravel and API-first architecture.</div></div></div>
+    <div class="exp-item"><div class="exp-period">NOV 2022 — DEC 2023</div><div class="exp-body"><div class="exp-title">Back-End Developer</div><div class="exp-company">ANMAT</div><div class="exp-desc">Built ERP systems using Native PHP, Laravel, and SQL Server for private enterprise clients.</div></div></div>
+    <div class="exp-item"><div class="exp-period">FEB 2022 — NOV 2022</div><div class="exp-body"><div class="exp-title">Back-End Developer</div><div class="exp-company">Aiwa Group</div><div class="exp-desc">Developed a freelancer-style mobile app backend using CakePHP, REST API, and Fawry payment integration.</div></div></div>
+    <div class="exp-item"><div class="exp-period">OCT 2021 — FEB 2022</div><div class="exp-body"><div class="exp-title">Back-End Developer</div><div class="exp-company">Mot Company</div><div class="exp-desc">Worked on backend services and API development for web and mobile products.</div></div></div>
   </div>
 </div>
-
-<!-- SKILLS -->
 <section id="skills-sec">
   <div class="skills-inner fade-up">
-    <div class="sec-label">Tech Stack</div>
-    <h2 class="sec-title">Skills & Technologies</h2>
-    <p class="sec-sub">A deep toolkit built across years of production-level development.</p>
+    <div class="sec-label">Tech Stack</div><h2 class="sec-title">Skills & Technologies</h2><p class="sec-sub">A deep toolkit built across 5+ years of production-level development.</p>
     <div class="skills-grid">
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">PHP 8.x</span><span class="sk-pct">95%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="95%"></div></div>
-        <div class="sk-sub">OOP · MVC · Design Patterns · SOLID</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">Laravel</span><span class="sk-pct">93%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="93%"></div></div>
-        <div class="sk-sub">Eloquent · Queues · Events · Livewire</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">CakePHP</span><span class="sk-pct">85%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div>
-        <div class="sk-sub">MVC · Bake · ORM · Middleware</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">MySQL / SQL Server</span><span class="sk-pct">88%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div>
-        <div class="sk-sub">Optimization · Indexing · Migrations</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">REST API</span><span class="sk-pct">92%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div>
-        <div class="sk-sub">JWT · OAuth · Versioning · Docs</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">Payment Gateways</span><span class="sk-pct">90%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div>
-        <div class="sk-sub">Stripe · Fawry · Ottu · PayPal</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">Vue.js / JavaScript</span><span class="sk-pct">75%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="75%"></div></div>
-        <div class="sk-sub">Vue 3 · Alpine.js · Axios · DOM</div>
-      </div>
-      <div class="sk-card">
-        <div class="sk-top"><span class="sk-name">AWS & DevOps</span><span class="sk-pct">72%</span></div>
-        <div class="sk-bar-bg"><div class="sk-bar" data-w="72%"></div></div>
-        <div class="sk-sub">EC2 · S3 · Docker · Nginx · Redis</div>
-      </div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">PHP 8.x</span><span class="sk-pct">95%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="95%"></div></div><div class="sk-sub">OOP · MVC · Design Patterns · SOLID</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">Laravel</span><span class="sk-pct">93%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="93%"></div></div><div class="sk-sub">Eloquent · Queues · Events · Livewire · Octane</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">CakePHP</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">MVC · Bake · ORM · Middleware</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">MySQL / SQL Server</span><span class="sk-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div><div class="sk-sub">Optimization · Indexing · Migrations</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">REST API / GraphQL</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">JWT · OAuth · Versioning · API Gateway</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">Payment Gateways</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Stripe · Fawry · Ottu · PayPal</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">Vue.js / JavaScript</span><span class="sk-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="75%"></div></div><div class="sk-sub">Vue 3 · Alpine.js · Axios</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">AWS & DevOps</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">EC2 · S3 · RDS · Docker · Nginx</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">Redis / Caching</span><span class="sk-pct">86%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="86%"></div></div><div class="sk-sub">Session · Queue · Rate Limiting</div></div>
+      <div class="sk-card"><div class="sk-top"><span class="sk-name">Microservices</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Service Decomposition · Docker Compose</div></div>
     </div>
   </div>
 </section>
-
-<!-- PROJECTS -->
 <div class="sec fade-up" id="projects-sec">
-  <div class="sec-label">Portfolio</div>
-  <h2 class="sec-title">Live Projects</h2>
-  <p class="sec-sub">Real-world products shipped and running in production.</p>
+  <div class="sec-label">Portfolio</div><h2 class="sec-title">Live Projects</h2><p class="sec-sub">Real-world products shipped and running in production.</p>
   <div class="proj-grid">
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">01 · Live App</div>
-        <div class="p-title">Aiwa — Service Marketplace</div>
-        <div class="p-desc">A freelancer-style mobile app where users register with services and get discovered by clients. Full payment flow via Fawry.</div>
-      </div>
-      <div class="p-footer">
-        <span class="p-tag">CakePHP</span><span class="p-tag">REST API</span><span class="p-tag">Fawry</span>
-      </div>
-    </div>
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">02 · Enterprise</div>
-        <div class="p-title">ERP System</div>
-        <div class="p-desc">Custom ERP for a private company deployed on their servers. Handles workflows, records, and internal management.</div>
-      </div>
-      <div class="p-footer">
-        <span class="p-tag">Native PHP</span><span class="p-tag">Laravel</span><span class="p-tag">SQL Server</span>
-      </div>
-    </div>
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">03 · SaaS</div>
-        <div class="p-title">On Shop — Store Builder</div>
-        <div class="p-desc">A Shopify-like platform where users create and manage their own stores with multiple payment gateway integrations.</div>
-      </div>
-      <div class="p-footer">
-        <span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Multi-Payment</span>
-      </div>
-    </div>
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">04 · Mobile App</div>
-        <div class="p-title">Gym App — Kuwait Client</div>
-        <div class="p-desc">Gym management system for a Kuwaiti client, featuring member management, subscriptions, and Ottu payment gateway.</div>
-      </div>
-      <div class="p-footer">
-        <span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Ottu</span>
-      </div>
-    </div>
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">05 · Web App</div>
-        <div class="p-title">RiteVet — Vet Services</div>
-        <div class="p-desc">Full veterinarian service platform connecting pet owners with vets. Stripe payments and real-time availability.</div>
-      </div>
-      <div class="p-footer">
-        <span class="p-tag">CakePHP</span><span class="p-tag">Laravel</span><span class="p-tag">Stripe</span>
-      </div>
-    </div>
-    <div class="p-card">
-      <div class="p-header">
-        <div class="p-num">06 · Open Source</div>
-        <div class="p-title">GitHub Projects</div>
-        <div class="p-desc">E-Commerce, Blog, Hotel Management, and Travel platforms available publicly on GitHub for review.</div>
-      </div>
-      <div class="p-footer">
-        <a href="https://github.com/magedamer/Back-End-Projects" target="_blank" class="p-gh-link">View on GitHub →</a>
-      </div>
-    </div>
+    <div class="p-card"><div class="p-header"><div class="p-num"><i class="fas fa-star"></i> 01 · Live App</div><div class="p-title">Aiwa — Service Marketplace</div><div class="p-desc">A freelancer-style mobile app where users register with services and get discovered by clients. Full payment flow via Fawry.</div></div><div class="p-footer"><span class="p-tag">CakePHP</span><span class="p-tag">REST API</span><span class="p-tag">Fawry</span></div></div>
+    <div class="p-card"><div class="p-header"><div class="p-num">02 · Enterprise</div><div class="p-title">ERP System</div><div class="p-desc">Custom ERP for a private company deployed on their servers. Handles workflows, records, and internal management.</div></div><div class="p-footer"><span class="p-tag">Native PHP</span><span class="p-tag">Laravel</span><span class="p-tag">SQL Server</span></div></div>
+    <div class="p-card"><div class="p-header"><div class="p-num">03 · SaaS</div><div class="p-title">On Shop — Store Builder</div><div class="p-desc">A Shopify-like platform where users create and manage their own stores with multiple payment gateway integrations.</div></div><div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Multi-Payment</span></div></div>
+    <div class="p-card"><div class="p-header"><div class="p-num">04 · Mobile App</div><div class="p-title">Gym App — Kuwait Client</div><div class="p-desc">Gym management system for a Kuwaiti client, featuring member management, subscriptions, and Ottu payment gateway.</div></div><div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Ottu</span></div></div>
+    <div class="p-card"><div class="p-header"><div class="p-num">05 · Web App</div><div class="p-title">RiteVet — Vet Services</div><div class="p-desc">Full veterinarian service platform connecting pet owners with vets. Stripe payments and real-time availability.</div></div><div class="p-footer"><span class="p-tag">CakePHP</span><span class="p-tag">Laravel</span><span class="p-tag">Stripe</span></div></div>
+    <div class="p-card"><div class="p-header"><div class="p-num">06 · Open Source</div><div class="p-title">GitHub Projects</div><div class="p-desc">E-Commerce, Blog, Hotel Management, and Travel platforms available publicly on GitHub for review.</div></div><div class="p-footer"><a href="https://github.com/magedamer/Back-End-Projects" target="_blank" rel="noopener noreferrer" class="p-gh-link"><i class="fab fa-github"></i> View on GitHub →</a></div></div>
   </div>
 </div>
-
-<!-- TRAINING & EDUCATION -->
 <div class="sec fade-up">
-  <div class="sec-label">Education & Training</div>
-  <h2 class="sec-title">Academic & Certifications</h2>
+  <div class="sec-label">Education</div><h2 class="sec-title">Academic & Certifications</h2>
   <div class="train-grid">
-    <div class="tr-card">
-      <div class="tr-icon">🎓</div>
-      <div>
-        <div class="tr-title">B.Sc. Computer Science</div>
-        <div class="tr-org">Menoufia University · 2014–2018 · Excellent</div>
-      </div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-icon">⚙️</div>
-      <div>
-        <div class="tr-title">Backend Dev — PHP, MySQL & Laravel</div>
-        <div class="tr-org">National Telecommunication Institute (NTI)</div>
-      </div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-icon">🌐</div>
-      <div>
-        <div class="tr-title">Web Applications with PHP & MySQL</div>
-        <div class="tr-org">ITI MOOC Academy</div>
-      </div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-icon">🎨</div>
-      <div>
-        <div class="tr-title">Front-End Internship</div>
-        <div class="tr-org">ALgoriza</div>
-      </div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-icon">⚡</div>
-      <div>
-        <div class="tr-title">JavaScript & HTML/CSS</div>
-        <div class="tr-org">ITI MOOC Academy</div>
-      </div>
-    </div>
+    <div class="tr-card"><div class="tr-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="tr-title">B.Sc. Computer Science</div><div class="tr-org">Menoufia University · 2014–2018 · Excellent</div></div></div>
+    <div class="tr-card"><div class="tr-icon"><i class="fas fa-code"></i></div><div><div class="tr-title">Backend Dev — PHP, MySQL & Laravel</div><div class="tr-org">National Telecommunication Institute (NTI)</div></div></div>
+    <div class="tr-card"><div class="tr-icon"><i class="fas fa-globe"></i></div><div><div class="tr-title">Web Applications with PHP & MySQL</div><div class="tr-org">ITI MOOC Academy</div></div></div>
+    <div class="tr-card"><div class="tr-icon"><i class="fas fa-paint-brush"></i></div><div><div class="tr-title">Front-End Internship</div><div class="tr-org">ALgoriza</div></div></div>
   </div>
 </div>
-
-<!-- CONTACT -->
 <section id="contact-sec">
   <div class="contact-inner fade-up">
-    <div class="contact-cta">
-      <div class="sec-label">Contact</div>
-      <h3>Let's build something great together.</h3>
-      <p>Looking for a backend developer who ships production-ready code? I'm available for full-time roles and freelance projects.</p>
-      <a href="mailto:magedamer44@gmail.com" class="btn-glow">Send a Message →</a>
-    </div>
+    <div class="contact-cta"><div class="sec-label">Connect</div><h3>Let's build something<br>great together.</h3><p>Looking for a backend developer who ships production-ready code? I'm available for full-time roles and freelance projects.</p><a href="https://wa.me/201024827469?text=Hi%20Maged%2C%20I'm%20interested%20in%20collaborating." class="btn-glow" target="_blank"><i class="fab fa-whatsapp"></i> Message on WhatsApp →</a></div>
     <div class="contact-cards">
-      <a href="mailto:magedamer44@gmail.com" class="cc">
-        <div class="cc-icon-box">✉️</div>
-        <div><div class="cc-label">Email</div><div class="cc-val">magedamer44@gmail.com</div></div>
-      </a>
-      <a href="tel:+201024827469" class="cc">
-        <div class="cc-icon-box">📞</div>
-        <div><div class="cc-label">Phone</div><div class="cc-val">+20 102 482 7469</div></div>
-      </a>
-      <a href="https://github.com/magedamer" target="_blank" class="cc">
-        <div class="cc-icon-box">🐙</div>
-        <div><div class="cc-label">GitHub</div><div class="cc-val">github.com/magedamer</div></div>
-      </a>
-      <a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" class="cc">
-        <div class="cc-icon-box">💼</div>
-        <div><div class="cc-label">LinkedIn</div><div class="cc-val">Maged Ahmed Amer</div></div>
-      </a>
-      <div class="cc">
-        <div class="cc-icon-box">📍</div>
-        <div><div class="cc-label">Location</div><div class="cc-val">Cairo, Egypt 🇪🇬</div></div>
-      </div>
+      <a href="https://wa.me/201024827469?text=Hello%20Maged!" class="cc" target="_blank" rel="noopener"><div class="cc-icon-box"><i class="fab fa-whatsapp fa-lg" style="color:#25D366;"></i></div><div><div class="cc-label">WhatsApp (fastest)</div><div class="cc-val">+20 102 482 7469</div></div></a>
+      <a href="https://github.com/magedamer" target="_blank" class="cc" rel="noopener"><div class="cc-icon-box"><i class="fab fa-github"></i></div><div><div class="cc-label">GitHub</div><div class="cc-val">github.com/magedamer</div></div></a>
+      <a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" class="cc" rel="noopener"><div class="cc-icon-box"><i class="fab fa-linkedin-in"></i></div><div><div class="cc-label">LinkedIn</div><div class="cc-val">Maged Ahmed Amer</div></div></a>
+      <div class="cc"><div class="cc-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="cc-label">Location</div><div class="cc-val">Cairo, Egypt 🇪🇬</div></div></div>
     </div>
   </div>
 </section>
-
-<footer>
-  <p>Built by <span>Maged Ahmed Amer</span> · Back-End Developer · Cairo, Egypt · 2025</p>
-</footer>
-
+<footer><p>Built with <i class="fas fa-heart" style="color:#00e5a0;"></i> by <span>Maged Ahmed Amer</span> · Senior Back-End Developer · 5+ years of excellence · <i class="fab fa-whatsapp"></i> WhatsApp preferred</p></footer>
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
-      e.target.querySelectorAll('.sk-bar').forEach(b => {
-        b.style.width = b.getAttribute('data-w');
-      });
+      e.target.querySelectorAll('.sk-bar').forEach(b => { if(b.getAttribute('data-w')) b.style.width = b.getAttribute('data-w'); });
     }
   });
 }, { threshold: 0.1 });
