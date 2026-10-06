@@ -2,219 +2,270 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Maged Ahmed — Senior Backend Developer</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8ef7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8ef7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maged Ahmed — Senior Software Engineer · PHP / Laravel</title>
+<meta name="description" content="Senior Software Engineer specialized in PHP & Laravel. ERP, hospital/clinic systems, e-commerce, e-learning, payment integrations and APIs. Available for freelance and full-time roles.">
+<meta name="theme-color" content="#070a12">
+<meta property="og:title" content="Maged Ahmed — Senior Software Engineer">
+<meta property="og:description" content="PHP / Laravel engineer building ERP, healthcare, e-commerce and e-learning platforms.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236366f1'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <style>
-/* ── Reset & Variables ── */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#050810;--bg2:#0b0f1e;--bg3:#111827;
-  --surface:#131929;--surface2:#1a2235;
-  --accent:#4f8ef7;--accent2:#00e5a0;--accent3:#a78bfa;
-  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
-  --text:#f0f4ff;--text2:#8b95b0;--text3:#4a5470;
-  --gradient-1:linear-gradient(135deg,#4f8ef7 0%,#a78bfa 100%);
-  --gradient-2:linear-gradient(135deg,#00e5a0 0%,#4f8ef7 100%);
+  color-scheme:dark;
+  --bg:#08080b;--bg2:#0d0d12;--surface:rgba(255,255,255,.035);--surface2:rgba(255,255,255,.06);
+  --violet:#8b5cf6;--indigo:#818cf8;--cyan:#38bdf8;--emerald:#4ade80;--amber:#fbbf24;--rose:#fb7185;
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --text:#fafafa;--text2:#a1a1aa;--text3:#71717a;
+  --accent-text:#c4b5fd;
+  --spot:rgba(139,92,246,.16);
+  --grid:rgba(255,255,255,.035);
+  --nav-bg:rgba(13,13,18,.72);
+  --shadow:0 20px 50px -20px rgba(0,0,0,.7);
+  --g1:linear-gradient(135deg,#8b5cf6 0%,#38bdf8 100%);
+  --g2:linear-gradient(135deg,#4ade80 0%,#38bdf8 100%);
+  --heading-font:'Space Grotesk','Inter',sans-serif;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+[data-theme="light"]{
+  color-scheme:light;
+  --bg:#fafafa;--bg2:#f1f1f5;--surface:rgba(255,255,255,.75);--surface2:#fff;
+  --violet:#7c3aed;--indigo:#6366f1;--cyan:#0284c7;--emerald:#16a34a;--amber:#d97706;--rose:#e11d48;
+  --border:rgba(9,9,11,.09);--border2:rgba(9,9,11,.16);
+  --text:#09090b;--text2:#52525b;--text3:#8a8a96;
+  --accent-text:#6d28d9;
+  --spot:rgba(124,58,237,.12);
+  --grid:rgba(9,9,11,.045);
+  --nav-bg:rgba(255,255,255,.78);
+  --shadow:0 20px 40px -22px rgba(30,30,60,.25);
+  --g1:linear-gradient(135deg,#7c3aed 0%,#0284c7 100%);
+  --g2:linear-gradient(135deg,#16a34a 0%,#0284c7 100%);
+}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%)}
+a{color:inherit}
+::selection{background:rgba(139,92,246,.35)}
+.blob{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0;opacity:.9}
+.blob1{width:520px;height:520px;background:rgba(139,92,246,.16);top:-200px;left:50%;transform:translateX(-30%)}
+.blob2{width:420px;height:420px;background:rgba(56,189,248,.09);bottom:-140px;left:-140px}
+.blob3{width:300px;height:300px;background:rgba(251,113,133,.05);top:55%;right:-100px}
+[data-theme="light"] .blob{opacity:.5}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g1);z-index:200;transition:width .1s linear}
 
-/* ── Background Blobs ── */
-.blob{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;animation:float 20s infinite ease-in-out}
-.blob1{width:600px;height:600px;background:rgba(79,142,247,0.07);top:-200px;right:-200px;animation-delay:0s}
-.blob2{width:500px;height:500px;background:rgba(0,229,160,0.05);bottom:-100px;left:-150px;animation-delay:5s}
-.blob3{width:300px;height:300px;background:rgba(167,139,250,0.06);top:50%;left:50%;animation-delay:10s}
-@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.05)}}
+/* Floating nav */
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 24px));z-index:100;padding:.6rem .7rem .6rem 1.2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;border:1px solid var(--border);border-radius:18px;background:var(--nav-bg);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);box-shadow:var(--shadow)}
+.nav-logo{font:700 1.1rem var(--heading-font);letter-spacing:-.3px;background:var(--g1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+.nav-links{display:flex;gap:.2rem;list-style:none}
+.nav-links a{display:block;font:500 .8rem 'Inter',sans-serif;color:var(--text2);text-decoration:none;padding:.45rem .8rem;border-radius:10px;transition:all .2s}
+.nav-links a:hover{color:var(--text);background:var(--surface2)}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-cta{background:var(--text);color:var(--bg);padding:.5rem 1.1rem;border-radius:11px;font:600 .8rem 'Inter',sans-serif;text-decoration:none;transition:all .25s;display:inline-flex;gap:.45rem;align-items:center}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px var(--violet)}
+.icon-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);width:36px;height:36px;border-radius:11px;cursor:pointer;font-size:.9rem;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
+.icon-btn:hover{color:var(--text);border-color:var(--border2)}
+.menu-btn{display:none}
 
-/* ── Navigation ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 5vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(5,8,16,0.85);backdrop-filter:blur(20px);transition:all .3s}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-0.5px;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-logo span{background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.78rem;font-weight:500;color:var(--text2);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;font-family:'DM Mono',monospace;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--accent2);transition:width .3s}
-.nav-links a:hover{color:var(--accent2)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:rgba(79,142,247,0.1);color:var(--accent);padding:.5rem 1.3rem;border-radius:50px;font-size:.8rem;font-weight:500;text-decoration:none;border:1px solid rgba(79,142,247,0.3);transition:all .3s;font-family:'DM Mono',monospace;backdrop-filter:blur(5px)}
-.nav-cta:hover{background:var(--accent);color:#fff;box-shadow:0 0 20px rgba(79,142,247,0.5);transform:translateY(-2px)}
+/* Hero */
+#hero{min-height:100vh;display:flex;align-items:center;padding:8.5rem 5vw 5rem;position:relative;z-index:1}
+.hero-inner{max-width:1120px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 390px;gap:4rem;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.eyebrow-line{display:none}
+.eyebrow-text{font:500 .72rem 'DM Mono',monospace;color:var(--accent-text);letter-spacing:1.6px;text-transform:uppercase;background:var(--surface);border:1px solid var(--border);padding:.35rem .8rem;border-radius:50px}
+.avail-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25);border-radius:50px;padding:.32rem .85rem;font-size:.72rem;font-weight:500;color:var(--emerald)}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}50%{box-shadow:0 0 0 6px rgba(74,222,128,0)}}
+h1{font:700 clamp(2.8rem,5.6vw,4.8rem)/1.02 var(--heading-font);letter-spacing:-.045em}
+h1 .name{background:linear-gradient(120deg,var(--text) 0%,var(--accent-text) 55%,var(--cyan) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1 .role{display:block;color:var(--text2);font-size:clamp(1.25rem,2.2vw,1.7rem);letter-spacing:-.02em;margin-top:.8rem;font-weight:500}
+.hero-desc{font-size:1.02rem;color:var(--text2);line-height:1.85;margin:1.7rem 0 2.1rem;max-width:540px}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn-glow{background:var(--g1);color:#fff;padding:.85rem 1.6rem;border-radius:13px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 10px 30px -10px var(--violet),inset 0 1px 0 rgba(255,255,255,.25);display:inline-flex;align-items:center;gap:.55rem}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px var(--violet),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-ghost{background:var(--surface);color:var(--text);padding:.85rem 1.5rem;border-radius:13px;font-size:.88rem;font-weight:500;text-decoration:none;transition:all .3s;border:1px solid var(--border2);display:inline-flex;align-items:center;gap:.55rem}
+.btn-ghost:hover{border-color:var(--violet);transform:translateY(-2px);background:var(--surface2)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:3rem}
+.hero-stats>div{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1rem 1.1rem;transition:all .25s}
+.hero-stats>div:hover{border-color:var(--border2);transform:translateY(-3px)}
+.stat-num{font:700 1.9rem/1 var(--heading-font);letter-spacing:-.03em;background:var(--g2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{font:400 .64rem 'DM Mono',monospace;color:var(--text3);margin-top:.5rem;text-transform:uppercase;letter-spacing:.9px}
 
-/* ── Hero ── */
-#hero{min-height:100vh;display:flex;align-items:center;padding:8rem 5vw 5rem;position:relative;z-index:1}
-.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
-.hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:2rem;flex-wrap:wrap}
-.eyebrow-line{width:40px;height:2px;background:var(--gradient-1);flex-shrink:0}
-.eyebrow-text{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase}
-.avail-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:50px;padding:.35rem .9rem;font-size:.72rem;font-weight:500;color:var(--accent2);margin-left:auto;backdrop-filter:blur(4px)}
-.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,229,160,.6)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(0,229,160,0)}}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3rem,5vw,4.5rem);line-height:1.05;letter-spacing:-3px;margin-bottom:.5rem}
-h1 .name{background:linear-gradient(135deg,var(--text) 0%,var(--accent) 80%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-h1 .role{color:var(--text2);font-size:clamp(1.5rem,2.5vw,2rem);display:block;margin-top:.4rem;letter-spacing:-1px;font-weight:700}
-.hero-desc{font-size:1rem;color:var(--text2);line-height:1.9;margin:1.8rem 0 2.5rem;font-weight:300;max-width:500px;border-left:2px solid var(--accent);padding-left:1.5rem}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-glow{background:var(--gradient-1);color:#fff;padding:.85rem 2rem;border-radius:50px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 0 20px rgba(79,142,247,0.3);display:inline-flex;align-items:center;gap:.5rem}
-.btn-glow:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(79,142,247,0.5)}
-.btn-ghost{background:transparent;color:var(--text);padding:.85rem 2rem;border-radius:50px;font-size:.88rem;font-weight:500;text-decoration:none;transition:all .3s;border:1px solid var(--border2);display:inline-flex;align-items:center;gap:.5rem;backdrop-filter:blur(5px)}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);background:rgba(79,142,247,0.05)}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);flex-wrap:wrap}
-.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;line-height:1;background:var(--gradient-2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-label{font-size:.72rem;color:var(--text3);margin-top:.4rem;text-transform:uppercase;letter-spacing:1px;font-family:'DM Mono',monospace}
-
-/* ── Hero Card ── */
-.hero-card{background:rgba(19,25,41,0.8);border:1px solid var(--border2);border-radius:24px;padding:2rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);transition:all .3s}
-.hero-card:hover{transform:translateY(-5px);border-color:rgba(79,142,247,0.3);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient-1)}
-.hc-avatar{width:80px;height:80px;border-radius:20px;background:var(--gradient-1);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:1.5rem;box-shadow:0 10px 20px rgba(79,142,247,0.2)}
-.hc-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:.2rem}
-.hc-role{font-size:.82rem;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:1.5rem}
-.hc-divider{height:1px;background:var(--border);margin:1.5rem 0}
-.hc-info{display:flex;flex-direction:column;gap:.8rem}
-.hc-row{display:flex;align-items:center;gap:.8rem;font-size:.82rem;transition:transform .2s}
-.hc-row:hover{transform:translateX(5px)}
-.hc-icon{width:28px;height:28px;border-radius:8px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
+.hero-card{background:var(--surface);border:1px solid var(--border2);border-radius:26px;padding:1.8rem;position:relative;overflow:hidden;backdrop-filter:blur(14px);transition:all .35s;box-shadow:var(--shadow)}
+.hero-card:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.5)}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g1)}
+.hc-avatar{width:72px;height:72px;border-radius:20px;background:var(--g1);display:flex;align-items:center;justify-content:center;font:700 1.6rem var(--heading-font);color:#fff;margin-bottom:1.2rem;box-shadow:0 14px 30px -10px var(--violet)}
+.hc-name{font:700 1.2rem var(--heading-font);letter-spacing:-.02em}
+.hc-role{font:400 .78rem 'DM Mono',monospace;color:var(--accent-text);margin:.2rem 0 1.2rem}
+.hc-divider{height:1px;background:var(--border);margin:1.2rem 0}
+.hc-info{display:flex;flex-direction:column;gap:.75rem}
+.hc-row{display:flex;align-items:center;gap:.8rem;font-size:.82rem}
+.hc-icon{width:30px;height:30px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--accent-text);flex-shrink:0}
 .hc-val{color:var(--text2)}
-.hc-val a{color:var(--accent);text-decoration:none;transition:color .2s}
-.hc-val a:hover{color:var(--accent2)}
-.hc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.5rem}
-.hc-tag{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);color:var(--accent3);padding:.25rem .65rem;border-radius:50px;font-size:.68rem;font-family:'DM Mono',monospace;transition:all .2s}
-.hc-tag:hover{background:rgba(167,139,250,0.2);transform:scale(1.05)}
+.hc-val a{color:var(--text);text-decoration:none}
+.hc-val a:hover{color:var(--accent-text)}
+.hc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.3rem}
+.hc-tag{background:var(--surface2);border:1px solid var(--border);color:var(--text2);padding:.25rem .65rem;border-radius:8px;font:400 .68rem 'DM Mono',monospace}
 
-/* ── Section Shared ── */
-.sec{padding:6rem 5vw;max-width:1100px;margin:0 auto;position:relative;z-index:1}
-.sec-label{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.8rem}
-.sec-label::before{content:'';width:40px;height:2px;background:var(--gradient-1);flex-shrink:0}
-.sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-1.5px;margin-bottom:.8rem;line-height:1.2}
-.sec-sub{font-size:.95rem;color:var(--text2);max-width:520px;line-height:1.8}
+/* Sections */
+.sec{padding:6rem 5vw;max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.sec-label{display:inline-flex;font:500 .7rem 'DM Mono',monospace;color:var(--accent-text);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:1rem;padding:.3rem .8rem;border-radius:50px;background:var(--surface);border:1px solid var(--border)}
+.sec-title{font:700 clamp(2rem,3.4vw,3rem)/1.1 var(--heading-font);letter-spacing:-.035em;margin-bottom:.9rem}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:560px;line-height:1.8}
+.band{background:linear-gradient(180deg,transparent,var(--surface) 12%,var(--surface) 88%,transparent);position:relative;z-index:1}
 
-/* ── Experience ── */
-.exp-list{margin-top:3.5rem;display:flex;flex-direction:column}
-.exp-item{display:grid;grid-template-columns:160px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:all .3s}
-.exp-item:hover{background:rgba(255,255,255,0.02);padding-left:1rem;border-radius:12px}
-.exp-period{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);padding-top:.3rem;line-height:1.5}
-.exp-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.2rem}
-.exp-company{font-size:.82rem;color:var(--accent);margin-bottom:.6rem;font-family:'DM Mono',monospace}
-.exp-current{display:inline-flex;align-items:center;gap:.3rem;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);color:var(--accent2);font-size:.65rem;padding:.2rem .6rem;border-radius:50px;margin-left:.6rem;vertical-align:middle}
-.exp-desc{font-size:.85rem;color:var(--text2);line-height:1.7}
+/* Card base: spotlight on hover */
+.fact,.svc,.sk-card,.p-card,.link-card,.tr-card,.cc,.exp-item{position:relative;overflow:hidden}
+.fact::after,.svc::after,.sk-card::after,.p-card::after,.link-card::after,.tr-card::after,.cc::after,.exp-item::after{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.fact:hover::after,.svc:hover::after,.sk-card:hover::after,.p-card:hover::after,.link-card:hover::after,.tr-card:hover::after,.cc:hover::after,.exp-item:hover::after{opacity:1}
 
-/* ── Skills Section ── */
-#skills-sec{background:rgba(17,24,39,0.5);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 5vw;backdrop-filter:blur(5px)}
-.skills-inner{max-width:1100px;margin:0 auto}
-.skills-category{margin-top:3rem}
-.skills-cat-title{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-bottom:1rem}
-.sk-card{background:rgba(17,24,39,0.6);border:1px solid var(--border);border-radius:18px;padding:1.3rem;transition:all .3s;backdrop-filter:blur(5px)}
-.sk-card:hover{border-color:rgba(79,142,247,0.4);transform:translateY(-5px);background:rgba(26,34,53,0.8);box-shadow:0 12px 24px rgba(0,0,0,0.2)}
-.sk-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.7rem}
-.sk-name{font-weight:700;font-size:.88rem;color:var(--text)}
-.sk-pct{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--accent2);flex-shrink:0;margin-left:.5rem}
-.sk-bar-bg{background:rgba(255,255,255,0.05);border-radius:50px;height:3px;overflow:hidden;margin-bottom:.7rem}
-.sk-bar{height:100%;border-radius:50px;background:var(--gradient-1);width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
-.sk-sub{font-size:.65rem;color:var(--text3);font-family:'DM Mono',monospace;line-height:1.5}
+/* About */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;margin-top:2.5rem}
+.about-text p{color:var(--text2);font-size:.98rem;line-height:1.9;margin-bottom:1.1rem}
+.about-text strong{color:var(--text);font-weight:600}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.fact{display:flex;flex-direction:column;gap:.6rem;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.1rem;transition:all .3s}
+.fact:hover{border-color:var(--border2);transform:translateY(-3px)}
+.fact i{width:34px;height:34px;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:.85rem}
+.fact b{display:block;font-size:.86rem}
+.fact span{font-size:.76rem;color:var(--text2);line-height:1.5;display:block;margin-top:.2rem}
 
-/* ── Projects ── */
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:3rem}
-.p-card{background:rgba(19,25,41,0.7);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .4s;display:flex;flex-direction:column;backdrop-filter:blur(5px)}
-.p-card:hover{transform:translateY(-8px);border-color:rgba(79,142,247,0.4);box-shadow:0 25px 40px rgba(0,0,0,0.3)}
-.p-header{padding:1.5rem 1.5rem 0;flex:1}
-.p-num{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent2);margin-bottom:.8rem;letter-spacing:1px}
-.p-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.6rem}
-.p-desc{font-size:.84rem;color:var(--text2);line-height:1.7}
-.p-footer{padding:1.2rem 1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;border-top:1px solid var(--border);margin-top:1.2rem}
-.p-tag{background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.15);color:var(--accent);padding:.22rem .6rem;border-radius:6px;font-size:.67rem;font-family:'DM Mono',monospace}
-.p-gh-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--accent2);text-decoration:none;font-family:'DM Mono',monospace;padding:.3rem .7rem;border-radius:50px;border:1px solid rgba(0,229,160,.2);background:rgba(0,229,160,.05);transition:all .2s}
-.p-gh-link:hover{background:rgba(0,229,160,.15);transform:translateX(3px)}
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2.6rem}
+.svc{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.6rem;transition:all .3s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.45);box-shadow:var(--shadow)}
+.svc-ic{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--g1);color:#fff;font-size:1.05rem;margin-bottom:1.1rem;box-shadow:0 10px 24px -10px var(--violet)}
+.svc h3{font:600 1.05rem var(--heading-font);letter-spacing:-.01em;margin-bottom:.45rem}
+.svc p{font-size:.84rem;color:var(--text2);line-height:1.7}
 
-/* ── Education ── */
-.train-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:3rem}
-.tr-card{background:rgba(19,25,41,0.6);border:1px solid var(--border);border-radius:16px;padding:1.4rem;display:flex;gap:1rem;align-items:flex-start;transition:all .3s;backdrop-filter:blur(5px)}
-.tr-card:hover{border-color:rgba(167,139,250,0.3);transform:translateY(-3px);background:rgba(26,34,53,0.7)}
-.tr-icon{width:40px;height:40px;border-radius:12px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.tr-title{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.4}
-.tr-org{font-size:.72rem;color:var(--accent3);font-family:'DM Mono',monospace;margin-top:.3rem}
+/* Experience */
+.exp-list{margin-top:2.8rem;display:flex;flex-direction:column;gap:.9rem}
+.exp-item{display:grid;grid-template-columns:165px 1fr;gap:1.6rem;padding:1.5rem 1.6rem;background:var(--surface);border:1px solid var(--border);border-radius:20px;transition:all .3s}
+.exp-item:hover{border-color:var(--border2);transform:translateX(6px)}
+.exp-period{font:400 .72rem 'DM Mono',monospace;color:var(--text3);padding-top:.35rem}
+.exp-title{font:600 1.05rem var(--heading-font);letter-spacing:-.01em}
+.exp-company{font:400 .8rem 'DM Mono',monospace;color:var(--accent-text);margin:.25rem 0 .6rem}
+.exp-current{display:inline-flex;align-items:center;gap:.35rem;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25);color:var(--emerald);font:500 .65rem 'Inter',sans-serif;padding:.15rem .6rem;border-radius:50px;margin-left:.6rem;vertical-align:middle}
+.exp-desc{font-size:.86rem;color:var(--text2);line-height:1.75}
 
-/* ── Visitor Stats Banner ── */
-#visitor-stats-banner{max-width:1100px;margin:0 auto;padding:0 5vw 4rem;position:relative;z-index:1}
-.vsb-inner{background:rgba(19,25,41,0.7);border:1px solid var(--border2);border-radius:20px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;backdrop-filter:blur(10px);position:relative;overflow:hidden}
-.vsb-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient-2)}
-.vsb-label{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent2);letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
-.vsb-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text)}
-.vsb-stats{display:flex;gap:3rem;flex-wrap:wrap}
-.vsb-stat{text-align:center}
-.vsb-stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;line-height:1}
-.vsb-stat-num.c-online{color:var(--accent2)}
-.vsb-stat-num.c-total{color:var(--accent)}
-.vsb-stat-num.c-today{color:var(--accent3)}
-.vsb-stat-label{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:.4rem}
-.vsb-online-row{display:flex;align-items:center;gap:.4rem;margin-top:.3rem;justify-content:center}
-.vsb-pulse{width:7px;height:7px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;flex-shrink:0}
+/* Skills */
+.skills-category{margin-top:2.6rem}
+.skills-cat-title{font:600 .78rem 'Inter',sans-serif;color:var(--text);letter-spacing:.4px;margin-bottom:1rem;display:flex;align-items:center;gap:.65rem}
+.skills-cat-title i{width:30px;height:30px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem}
+.skills-cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:.9rem}
+.sk-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.15rem;transition:all .3s}
+.sk-card:hover{border-color:rgba(139,92,246,.45);transform:translateY(-4px)}
+.sk-top{display:flex;justify-content:space-between;margin-bottom:.7rem}
+.sk-name{font-weight:600;font-size:.88rem}
+.sk-pct{font:500 .72rem 'DM Mono',monospace;color:var(--emerald)}
+.sk-bar-bg{background:var(--border);border-radius:50px;height:4px;overflow:hidden;margin-bottom:.75rem}
+.sk-bar{height:100%;border-radius:50px;background:var(--g1);width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.sk-sub{font:400 .65rem/1.55 'DM Mono',monospace;color:var(--text3)}
 
-/* ── Contact ── */
-#contact-sec{background:linear-gradient(180deg,rgba(5,8,16,0.9) 0%,rgba(19,25,41,0.95) 100%);border-top:1px solid var(--border);padding:6rem 5vw}
-.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.contact-cards{display:flex;flex-direction:column;gap:.8rem}
-.cc{display:flex;align-items:center;gap:1rem;background:rgba(17,24,39,0.6);border:1px solid var(--border);border-radius:16px;padding:1rem 1.2rem;transition:all .3s;text-decoration:none;backdrop-filter:blur(5px)}
-.cc:hover{border-color:rgba(79,142,247,0.5);transform:translateX(8px);background:rgba(26,34,53,0.8)}
-.cc-icon-box{width:42px;height:42px;border-radius:12px;background:rgba(79,142,247,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
-.cc-label{font-size:.65rem;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.2rem}
-.cc-val{font-size:.88rem;font-weight:600;color:var(--text)}
-.contact-cta h3{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-1px;margin-bottom:1rem;line-height:1.2;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.contact-cta p{font-size:.95rem;color:var(--text2);line-height:1.8;margin-bottom:2rem}
+/* Projects */
+.filter-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2rem}
+.chip{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:.45rem 1rem;border-radius:11px;font:500 .78rem 'Inter',sans-serif;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--border2);color:var(--text)}
+.chip.active{background:var(--text);color:var(--bg);border-color:transparent}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem;margin-top:1.8rem}
+.p-card{--c:var(--violet);background:var(--surface);border:1px solid var(--border);border-radius:22px;transition:all .35s;display:flex;flex-direction:column}
+.p-card[data-cat="enterprise"]{--c:#818cf8}
+.p-card[data-cat="ecom"]{--c:#fbbf24}
+.p-card[data-cat="health"]{--c:#4ade80}
+.p-card[data-cat="api"]{--c:#38bdf8}
+.p-card[data-cat="media"]{--c:#fb7185}
+.p-card::before{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 18%,transparent),transparent);pointer-events:none}
+.p-card:hover{transform:translateY(-7px);border-color:color-mix(in srgb,var(--c) 55%,transparent);box-shadow:var(--shadow)}
+.p-card.hide{display:none}
+.p-header{padding:1.5rem 1.5rem 0;flex:1;position:relative}
+.p-num{display:inline-block;font:500 .66rem 'DM Mono',monospace;color:var(--c);margin-bottom:.9rem;letter-spacing:.8px;text-transform:uppercase;padding:.22rem .6rem;border-radius:7px;background:color-mix(in srgb,var(--c) 12%,transparent);border:1px solid color-mix(in srgb,var(--c) 28%,transparent)}
+.p-title{font:600 1.12rem var(--heading-font);letter-spacing:-.015em;margin-bottom:.55rem}
+.p-desc{font-size:.85rem;color:var(--text2);line-height:1.7}
+.p-feats{list-style:none;margin-top:.9rem;display:grid;gap:.3rem}
+.p-feats li{font-size:.78rem;color:var(--text2)}
+.p-feats li::before{content:'→';color:var(--c);margin-right:.5rem}
+.p-footer{padding:1.1rem 1.5rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid var(--border);margin-top:1.2rem;position:relative}
+.p-tag{background:var(--surface2);border:1px solid var(--border);color:var(--text2);padding:.2rem .6rem;border-radius:7px;font:400 .67rem 'DM Mono',monospace}
 
-/* ── Footer ── */
-footer{border-top:1px solid var(--border);text-align:center;padding:2rem 5vw;font-size:.75rem;color:var(--text3);font-family:'DM Mono',monospace;background:rgba(5,8,16,0.8)}
-footer span{color:var(--accent2);font-weight:600}
+/* Project links */
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:.9rem;margin-top:2.5rem}
+.link-card{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.1rem 1.2rem;text-decoration:none;transition:all .3s}
+.link-card:hover{border-color:rgba(56,189,248,.5);transform:translateY(-4px);box-shadow:var(--shadow)}
+.link-ic{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:var(--surface2);border:1px solid var(--border);color:var(--cyan);flex-shrink:0}
+.link-t{font-weight:600;font-size:.9rem}
+.link-d{font-size:.75rem;color:var(--text2);margin-top:.15rem}
+.link-arrow{margin-left:auto;color:var(--text3);transition:all .2s;font-size:.8rem}
+.link-card:hover .link-arrow{color:var(--cyan);transform:translate(3px,-3px)}
 
-/* ── Scroll animations ── */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(0.2,0.9,0.4,1.1),transform .8s cubic-bezier(0.2,0.9,0.4,1.1)}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+/* Education */
+.train-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin-top:2.5rem}
+.tr-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.3rem;display:flex;gap:1rem;transition:all .3s}
+.tr-card:hover{border-color:rgba(251,191,36,.4);transform:translateY(-4px)}
+.tr-icon{width:42px;height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--amber);flex-shrink:0}
+.tr-title{font-size:.88rem;font-weight:600;line-height:1.4}
+.tr-org{font:400 .72rem 'DM Mono',monospace;color:var(--text3);margin-top:.3rem}
 
-/* ── Responsive ── */
+/* Contact */
+#contact-sec{position:relative;z-index:1;padding:6rem 5vw;border-top:1px solid var(--border);background:radial-gradient(ellipse 70% 80% at 50% 100%,rgba(139,92,246,.14),transparent 70%)}
+.contact-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.contact-cta h3{font:700 clamp(2rem,3.4vw,2.8rem)/1.1 var(--heading-font);letter-spacing:-.035em;margin-bottom:1rem;background:linear-gradient(120deg,var(--text),var(--accent-text) 60%,var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.contact-cta p{color:var(--text2);line-height:1.8;margin-bottom:2rem;font-size:1rem}
+.contact-cards{display:flex;flex-direction:column;gap:.7rem}
+.cc{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1rem 1.2rem;transition:all .3s;text-decoration:none}
+a.cc:hover{border-color:rgba(139,92,246,.5);transform:translateX(8px)}
+.cc-icon-box{width:42px;height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+.cc-label{font:400 .64rem 'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.8px}
+.cc-val{font-size:.9rem;font-weight:600}
+footer{position:relative;z-index:1;border-top:1px solid var(--border);text-align:center;padding:2rem 5vw;font:400 .75rem 'DM Mono',monospace;color:var(--text3)}
+footer span{color:var(--accent-text);font-weight:500}
+
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.fade-up.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none}.sk-bar{transition:none}html{scroll-behavior:auto}}
+
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-inner,.contact-inner,.about-grid{grid-template-columns:1fr;gap:2.5rem}
   .hero-card{display:none}
-  .exp-item{grid-template-columns:1fr;gap:.5rem}
-  .contact-inner{grid-template-columns:1fr;gap:3rem}
-  .nav-links{display:none}
-  .avail-badge{margin-left:0}
-  .vsb-inner{flex-direction:column;align-items:flex-start}
+  .exp-item{grid-template-columns:1fr;gap:.4rem}
+  .menu-btn{display:inline-flex}
+  .nav-cta{display:none}
+  .nav-links{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;padding:.6rem;gap:.1rem;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:.7rem .9rem}
 }
 @media(max-width:600px){
-  nav{padding:.9rem 4vw}
-  #hero{padding:6rem 4vw 3rem}
-  .sec{padding:4rem 4vw}
-  #skills-sec{padding:4rem 4vw}
-  #contact-sec{padding:4rem 4vw}
-  .hero-stats{gap:1.5rem}
-  .stat-num{font-size:1.8rem}
-  .vsb-inner{padding:1.5rem}
-  .vsb-stats{gap:1.5rem}
-  .vsb-stat-num{font-size:1.6rem}
-  #visitor-stats-banner{padding:0 4vw 3rem}
+  #hero{padding:7.5rem 5vw 3rem}
+  .sec{padding:4.2rem 5vw}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr}
+  .btn-glow,.btn-ghost{flex:1;justify-content:center}
 }
 </style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
+<div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
 
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-<div class="blob blob3"></div>
-
-<!-- Navigation -->
 <nav>
-  <div class="nav-logo"><span>&lt;</span>Maged<span>/&gt;</span></div>
-  <ul class="nav-links">
+  <a href="#hero" class="nav-logo">&lt;Maged/&gt;</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#exp">Experience</a></li>
     <li><a href="#skills-sec">Skills</a></li>
     <li><a href="#projects-sec">Projects</a></li>
+    <li><a href="#links-sec">Links</a></li>
     <li><a href="#contact-sec">Contact</a></li>
   </ul>
-  <a href="https://wa.me/201024827469?text=Hello%20Maged%2C%20I'm%20interested%20in%20working%20with%20you." class="nav-cta" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp" style="margin-right:6px"></i>WhatsApp Me
-  </a>
+  <div class="nav-right">
+    <a href="https://wa.me/201024827469?text=Hello%20Maged%2C%20I'm%20interested%20in%20working%20with%20you." class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
 </nav>
 
 <!-- Hero -->
@@ -223,211 +274,354 @@ footer span{color:var(--accent2);font-weight:600}
     <div class="fade-up">
       <div class="hero-eyebrow">
         <div class="eyebrow-line"></div>
-        <div class="eyebrow-text">Senior Backend Developer · Cairo, Egypt</div>
+        <div class="eyebrow-text">Senior Software Engineer · Egypt</div>
         <div class="avail-badge"><span class="avail-dot"></span>Open to opportunities</div>
       </div>
-      <h1>
-        <span class="name">Maged Ahmed</span>
-        <span class="role">Senior Backend Developer</span>
-      </h1>
-      <p class="hero-desc">5+ years of experience crafting scalable web applications and APIs. Specialized in PHP, Laravel, microservices, cloud infrastructure (AWS), and leading complex integrations from payment gateways to real-time systems.</p>
+      <h1><span class="name">Maged Ahmed</span><span class="role">Senior Software Engineer · PHP &amp; Laravel</span></h1>
+      <p class="hero-desc">5+ years building production systems end to end — ERP, hospital and clinic management, e-commerce, e-learning and IPTV platforms — with secure APIs, payment integrations and clean, maintainable architecture.</p>
       <div class="hero-ctas">
         <a href="#projects-sec" class="btn-glow"><i class="fas fa-code"></i> View My Work</a>
         <a href="https://wa.me/201024827469?text=Hi%20Maged%2C%20I%20saw%20your%20portfolio" class="btn-ghost" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://github.com/magedamer" class="btn-ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       </div>
       <div class="hero-stats">
         <div><div class="stat-num">5+</div><div class="stat-label">Years Exp.</div></div>
         <div><div class="stat-num">12+</div><div class="stat-label">Live Projects</div></div>
         <div><div class="stat-num">5+</div><div class="stat-label">Companies</div></div>
-        <div><div class="stat-num">5+</div><div class="stat-label">Frameworks</div></div>
+        <div><div class="stat-num">4</div><div class="stat-label">Payment Gateways</div></div>
       </div>
     </div>
     <div class="hero-card fade-up" style="transition-delay:.2s">
       <div class="hc-avatar">MA</div>
       <div class="hc-name">Maged Ahmed Amer</div>
-      <div class="hc-role">// senior-backend-architect</div>
+      <div class="hc-role">// senior-software-engineer</div>
       <div class="hc-divider"></div>
       <div class="hc-info">
-        <div class="hc-row"><div class="hc-icon"><i class="fas fa-map-marker-alt"></i></div><div class="hc-val">Cairo, Egypt</div></div>
-        <div class="hc-row"><div class="hc-icon"><i class="fab fa-whatsapp"></i></div><div class="hc-val"><a href="https://wa.me/201024827469" target="_blank" rel="noopener">+20 102 482 7469 (WhatsApp)</a></div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fas fa-map-marker-alt"></i></div><div class="hc-val">Egypt · Remote friendly</div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fab fa-whatsapp"></i></div><div class="hc-val"><a href="https://wa.me/201024827469" target="_blank" rel="noopener">+20 102 482 7469</a></div></div>
         <div class="hc-row"><div class="hc-icon"><i class="fab fa-github"></i></div><div class="hc-val"><a href="https://github.com/magedamer" target="_blank" rel="noopener">github.com/magedamer</a></div></div>
-        <div class="hc-row"><div class="hc-icon"><i class="fab fa-linkedin"></i></div><div class="hc-val"><a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" rel="noopener">LinkedIn Profile</a></div></div>
+        <div class="hc-row"><div class="hc-icon"><i class="fab fa-linkedin-in"></i></div><div class="hc-val"><a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" rel="noopener">LinkedIn Profile</a></div></div>
       </div>
       <div class="hc-tags">
-        <span class="hc-tag">Laravel</span><span class="hc-tag">PHP 8</span><span class="hc-tag">Microservices</span>
-        <span class="hc-tag">AWS</span><span class="hc-tag">Redis</span><span class="hc-tag">Docker</span>
-        <span class="hc-tag">K8s</span><span class="hc-tag">MySQL</span>
+        <span class="hc-tag">Laravel 12</span><span class="hc-tag">PHP 8</span><span class="hc-tag">MySQL</span>
+        <span class="hc-tag">Docker</span><span class="hc-tag">Redis</span><span class="hc-tag">Git</span><span class="hc-tag">Filament</span>
       </div>
     </div>
   </div>
 </section>
+
+<!-- About -->
+<div class="sec fade-up" id="about">
+  <div class="sec-label">About</div>
+  <h2 class="sec-title">Engineer who owns the whole build</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a <strong>Senior Software Engineer</strong> specialized in <strong>PHP and Laravel</strong>, with a full-stack background. On client projects I usually work as the sole developer — owning <strong>architecture, development, deployment and hand-over</strong>.</p>
+      <p>I've built large modular Laravel systems: a <strong>9-module hospital management system</strong>, a <strong>7-module multi-tenant ERP</strong> (HR, payroll, accounting, inventory) and a <strong>multi-instructor e-learning platform</strong> with secure video, Stripe payments and commission splitting.</p>
+      <p>I also build Arabic-first (RTL) products, Sanctum-secured mobile APIs, and I'm expanding into <strong>Flutter</strong> to deliver mobile apps backed by my own APIs.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><i class="fas fa-language"></i><div><b>Arabic &amp; English products</b><span>RTL-first UI, bilingual systems</span></div></div>
+      <div class="fact"><i class="fas fa-user-tie"></i><div><b>Freelance + full-time</b><span>Active on Mostaql &amp; Khamsat</span></div></div>
+      <div class="fact"><i class="fas fa-puzzle-piece"></i><div><b>Modular architecture</b><span>nwidart modules · multi-tenancy · Spatie permissions</span></div></div>
+      <div class="fact"><i class="fas fa-bolt"></i><div><b>Real-time &amp; performance</b><span>Redis pub/sub, broadcasting, locking, query tuning</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div class="band" id="services">
+  <div class="sec fade-up">
+    <div class="sec-label">What I Do</div>
+    <h2 class="sec-title">Services</h2>
+    <p class="sec-sub">Typical work I take on, from a fixed-scope admin panel to a full multi-module platform.</p>
+    <div class="svc-grid">
+      <div class="svc"><div class="svc-ic"><i class="fas fa-layer-group"></i></div><h3>Custom Web Applications</h3><p>Laravel apps and admin panels (Filament), designed for your workflow and delivered with clean code.</p></div>
+      <div class="svc"><div class="svc-ic"><i class="fas fa-building"></i></div><h3>ERP &amp; Management Systems</h3><p>HR, payroll, accounting, inventory, hospital and clinic systems with roles, permissions and reports.</p></div>
+      <div class="svc"><div class="svc-ic"><i class="fas fa-cart-shopping"></i></div><h3>E-commerce</h3><p>Laravel storefronts and WooCommerce stores with local payments, COD flows and Arabic RTL UI.</p></div>
+      <div class="svc"><div class="svc-ic"><i class="fas fa-mobile-screen"></i></div><h3>Mobile APIs</h3><p>Versioned REST APIs with Sanctum auth, validation, OTP and push notifications for Flutter/native apps.</p></div>
+      <div class="svc"><div class="svc-ic"><i class="fas fa-credit-card"></i></div><h3>Payments &amp; Integrations</h3><p>Stripe, Fawry, Ottu, PayPal, SMS/WhatsApp and third-party APIs, with webhooks and reconciliation.</p></div>
+      <div class="svc"><div class="svc-ic"><i class="fas fa-server"></i></div><h3>Deployment &amp; DevOps</h3><p>Docker, VPS setup (Nginx/Apache), CI/CD, backups and performance hardening.</p></div>
+    </div>
+  </div>
+</div>
 
 <!-- Experience -->
 <div class="sec fade-up" id="exp">
   <div class="sec-label">Experience</div>
   <h2 class="sec-title">Work History</h2>
-  <p class="sec-sub">5+ years across startups and product companies, building real-world applications.</p>
+  <p class="sec-sub">5+ years across startups, product companies and independent client work.</p>
   <div class="exp-list">
     <div class="exp-item">
+      <div class="exp-period">2023 — Present</div>
+      <div>
+        <div class="exp-title">Freelance Software Engineer <span class="exp-current"><span class="avail-dot" style="width:5px;height:5px"></span>Current</span></div>
+        <div class="exp-company">Mostaql · Khamsat · Direct clients</div>
+        <div class="exp-desc">Delivering web apps, admin panels, APIs and system integrations as the sole developer — from requirements and architecture to deployment. Recent work includes a recruitment platform for a Saudi client, an Arabic e-commerce storefront, a dental clinic management system and mobile authentication APIs.</div>
+      </div>
+    </div>
+    <div class="exp-item">
       <div class="exp-period">APR 2024 — Present</div>
-      <div class="exp-body">
-        <div class="exp-title">Full-Stack Developer <span class="exp-current"><span class="avail-dot" style="width:5px;height:5px"></span>Current</span></div>
+      <div>
+        <div class="exp-title">Full-Stack Developer</div>
         <div class="exp-company">RiteVet</div>
-        <div class="exp-desc">Web application for veterinarian services built with CakePHP, Laravel, and Stripe payment gateway integration.</div>
+        <div class="exp-desc">Web application for veterinarian services built with CakePHP and Laravel, with Stripe payment gateway integration.</div>
       </div>
     </div>
     <div class="exp-item">
       <div class="exp-period">JAN 2024 — MAY 2024</div>
-      <div class="exp-body">
+      <div>
         <div class="exp-title">Full-Stack Developer</div>
         <div class="exp-company">OnCall</div>
-        <div class="exp-desc">Contributed to on-demand service platform development with Laravel and API-first architecture.</div>
+        <div class="exp-desc">Contributed to an on-demand service platform with Laravel and API-first architecture.</div>
       </div>
     </div>
     <div class="exp-item">
       <div class="exp-period">NOV 2022 — DEC 2023</div>
-      <div class="exp-body">
+      <div>
         <div class="exp-title">Back-End Developer</div>
         <div class="exp-company">ANMAT</div>
-        <div class="exp-desc">Built ERP systems using Native PHP, Laravel, and SQL Server for private enterprise clients.</div>
+        <div class="exp-desc">Built ERP systems using native PHP, Laravel and SQL Server for private enterprise clients.</div>
       </div>
     </div>
     <div class="exp-item">
       <div class="exp-period">FEB 2022 — NOV 2022</div>
-      <div class="exp-body">
+      <div>
         <div class="exp-title">Back-End Developer</div>
         <div class="exp-company">Aiwa Group</div>
-        <div class="exp-desc">Developed a freelancer-style mobile app backend using CakePHP, REST API, and Fawry payment integration.</div>
+        <div class="exp-desc">Developed a freelancer-style mobile app backend using CakePHP, REST API and Fawry payment integration.</div>
       </div>
     </div>
     <div class="exp-item">
       <div class="exp-period">OCT 2021 — FEB 2022</div>
-      <div class="exp-body">
+      <div>
         <div class="exp-title">Back-End Developer</div>
         <div class="exp-company">Mot Company</div>
-        <div class="exp-desc">Worked on backend services and API development for web and mobile products.</div>
+        <div class="exp-desc">Backend services and API development for web and mobile products.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Skills & Technologies -->
-<section id="skills-sec">
-  <div class="skills-inner fade-up">
+<!-- Skills -->
+<div class="band" id="skills-sec">
+  <div class="sec fade-up">
     <div class="sec-label">Tech Stack</div>
     <h2 class="sec-title">Skills &amp; Technologies</h2>
-    <p class="sec-sub">A deep toolkit built across 5+ years of production-level development — from backend core to DevOps, databases, payments, and beyond.</p>
+    <p class="sec-sub">A toolkit built across 5+ years of production development.</p>
 
-    <!-- Backend Core -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-server" style="color:var(--accent)"></i>Backend Core</div>
+      <div class="skills-cat-title"><i class="fas fa-server" style="color:var(--indigo)"></i>Backend Core</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">PHP 8.x</span><span class="sk-pct">95%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="95%"></div></div><div class="sk-sub">OOP · MVC · Design Patterns · SOLID · PSR Standards</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Laravel</span><span class="sk-pct">93%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="93%"></div></div><div class="sk-sub">Eloquent · Queues · Events · Livewire · Octane · Sanctum</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">CakePHP</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">MVC · Bake · ORM · Middleware · Authentication</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">REST API / GraphQL</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">JWT · OAuth2 · Versioning · API Gateway · Swagger/OpenAPI</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Microservices</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Service Decomposition · Event-Driven · Message Queues · RabbitMQ</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Node.js / Express</span><span class="sk-pct">65%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="65%"></div></div><div class="sk-sub">REST APIs · Socket.io · Middleware · npm ecosystem</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">PHP 8.x</span><span class="sk-pct">95%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="95%"></div></div><div class="sk-sub">OOP · Design Patterns · SOLID · PSR</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Laravel</span><span class="sk-pct">93%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="93%"></div></div><div class="sk-sub">Eloquent · Queues · Events · Sanctum · Filament · Livewire</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">CakePHP</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">MVC · ORM · Middleware · Auth</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">REST API</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">Sanctum · JWT · Versioning · Swagger</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Modular Systems</span><span class="sk-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div><div class="sk-sub">nwidart modules · Multi-tenancy · Spatie Permissions</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Real-time</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">Redis Pub/Sub · Laravel Broadcasting · Pessimistic Locking</div></div>
       </div>
     </div>
 
-    <!-- Databases & Storage -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-database" style="color:var(--accent2)"></i>Databases &amp; Storage</div>
+      <div class="skills-cat-title"><i class="fas fa-database" style="color:var(--emerald)"></i>Databases</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">MySQL</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Query Optimization · Indexing · Stored Procedures · Replication</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">SQL Server</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">T-SQL · SSMS · Migrations · Views · Triggers</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Redis</span><span class="sk-pct">86%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="86%"></div></div><div class="sk-sub">Session · Cache · Queue · Pub/Sub · Rate Limiting</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">MongoDB</span><span class="sk-pct">70%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="70%"></div></div><div class="sk-sub">Aggregations · Atlas · Indexing · Schema Design</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Elasticsearch</span><span class="sk-pct">68%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="68%"></div></div><div class="sk-sub">Full-Text Search · Indexing · Kibana · Log Analysis</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">PostgreSQL</span><span class="sk-pct">72%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="72%"></div></div><div class="sk-sub">JSONB · Extensions · Full-Text Search · Transactions</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">MySQL</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Optimization · Indexing · Transactions</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">SQL Server</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">T-SQL · Views · Triggers</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Redis</span><span class="sk-pct">86%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="86%"></div></div><div class="sk-sub">Cache · Queue · Pub/Sub · Rate Limiting</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">PostgreSQL / MongoDB</span><span class="sk-pct">70%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="70%"></div></div><div class="sk-sub">JSONB · Aggregations · Schema Design</div></div>
       </div>
     </div>
 
-    <!-- DevOps & Cloud -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-cloud" style="color:var(--accent3)"></i>DevOps &amp; Cloud</div>
+      <div class="skills-cat-title"><i class="fas fa-cloud" style="color:var(--cyan)"></i>DevOps &amp; Cloud</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">AWS</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">EC2 · S3 · RDS · Lambda · CloudWatch · IAM · SQS</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Docker</span><span class="sk-pct">84%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="84%"></div></div><div class="sk-sub">Compose · Multi-stage Builds · Networking · Volumes</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Kubernetes (K8s)</span><span class="sk-pct">70%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="70%"></div></div><div class="sk-sub">Pods · Deployments · Services · Helm · Ingress</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Nginx / Apache</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Reverse Proxy · Load Balancing · SSL/TLS · Virtual Hosts</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">CI/CD Pipelines</span><span class="sk-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="75%"></div></div><div class="sk-sub">GitHub Actions · GitLab CI · Jenkins · Automated Deploys</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Linux / Bash</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">Server Management · Shell Scripts · Cron Jobs · SSH</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Docker</span><span class="sk-pct">84%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="84%"></div></div><div class="sk-sub">Compose · Multi-stage · Volumes</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Linux / VPS</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Nginx · Apache · SSL · Cron · SSH · CWP</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">AWS</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">EC2 · S3 · RDS · SQS · CloudWatch</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">CI/CD &amp; Git</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">GitHub Actions · GitLab CI · Git Flow</div></div>
       </div>
     </div>
 
-    <!-- Payments & Integrations -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-credit-card" style="color:var(--accent)"></i>Payments &amp; Integrations</div>
+      <div class="skills-cat-title"><i class="fas fa-credit-card" style="color:var(--amber)"></i>Payments &amp; Integrations</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Stripe</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">Checkout · Subscriptions · Webhooks · Connect · Refunds</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Fawry</span><span class="sk-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div><div class="sk-sub">Payment API · Callbacks · Reconciliation · Sandbox Testing</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Ottu</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">Kuwait Gateway · Checkout Sessions · Webhooks</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">PayPal</span><span class="sk-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="78%"></div></div><div class="sk-sub">REST API · IPN · Subscriptions · Express Checkout</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Firebase</span><span class="sk-pct">72%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="72%"></div></div><div class="sk-sub">Push Notifications · Realtime DB · Auth · Cloud Messaging</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Third-party APIs</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Google Maps · Twilio SMS · SendGrid · WhatsApp Business</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Stripe</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">Checkout · Subscriptions · Webhooks</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Fawry</span><span class="sk-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div><div class="sk-sub">Payment API · Callbacks · Reconciliation</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Ottu / PayPal</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Checkout sessions · IPN · Webhooks</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Third-party APIs</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Maps · SMS · Email (SMTP) · WhatsApp · Firebase FCM</div></div>
       </div>
     </div>
 
-    <!-- Frontend & Tools -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-laptop-code" style="color:var(--accent2)"></i>Frontend &amp; Tooling</div>
+      <div class="skills-cat-title"><i class="fas fa-laptop-code" style="color:var(--rose)"></i>Frontend &amp; Mobile</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Vue.js</span><span class="sk-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="75%"></div></div><div class="sk-sub">Vue 3 · Composition API · Pinia · Vue Router</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">JavaScript / Alpine.js</span><span class="sk-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="78%"></div></div><div class="sk-sub">ES6+ · Axios · Fetch API · DOM Manipulation</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">HTML5 / CSS3 / Tailwind</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">Responsive Design · Flexbox · Grid · Tailwind CSS</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Git / GitHub / GitLab</span><span class="sk-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="90%"></div></div><div class="sk-sub">Branching · PRs · Code Review · Git Flow · Monorepos</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Postman / Insomnia</span><span class="sk-pct">92%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="92%"></div></div><div class="sk-sub">API Testing · Collections · Environments · Mock Servers</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">PHPUnit / Pest</span><span class="sk-pct">74%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="74%"></div></div><div class="sk-sub">Unit Tests · Feature Tests · Mocking · TDD</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Blade / Livewire / Alpine</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">AJAX · RTL layouts · Tailwind</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Vue.js</span><span class="sk-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="75%"></div></div><div class="sk-sub">Vue 3 · Composition API · Pinia</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Flutter</span><span class="sk-pct">65%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="65%"></div></div><div class="sk-sub">REST integration · Firebase · Bloc / Provider / Riverpod</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">HTML / CSS / JS</span><span class="sk-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="82%"></div></div><div class="sk-sub">Responsive · Grid · Flexbox · ES6+</div></div>
       </div>
     </div>
 
-    <!-- Architecture & Soft Skills -->
     <div class="skills-category">
-      <div class="skills-cat-title"><i class="fas fa-sitemap" style="color:var(--accent3)"></i>Architecture &amp; Practices</div>
+      <div class="skills-cat-title"><i class="fas fa-sitemap" style="color:var(--indigo)"></i>Architecture &amp; Practices</div>
       <div class="skills-grid">
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">System Design</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">Scalability · High Availability · Load Balancing · CDN</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Security Best Practices</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">OWASP · SQL Injection · XSS · CSRF · Rate Limiting</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Performance Optimization</span><span class="sk-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="88%"></div></div><div class="sk-sub">Query Tuning · Caching Strategies · Lazy Loading · Profiling</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Agile / Scrum</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">Sprints · Jira · Code Reviews · Daily Standups</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Technical Leadership</span><span class="sk-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="78%"></div></div><div class="sk-sub">Mentoring · Architecture Review · Onboarding · Documentation</div></div>
-        <div class="sk-card"><div class="sk-top"><span class="sk-name">Event Sourcing / CQRS</span><span class="sk-pct">70%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="70%"></div></div><div class="sk-sub">Domain Events · Command Bus · Read/Write Separation</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">System Design</span><span class="sk-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="80%"></div></div><div class="sk-sub">Scalability · Caching · Queues · Load balancing</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Security</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">OWASP · XSS · CSRF · SQLi · Rate limiting</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Testing</span><span class="sk-pct">74%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="74%"></div></div><div class="sk-sub">PHPUnit · Pest · Feature tests</div></div>
+        <div class="sk-card"><div class="sk-top"><span class="sk-name">Agile / Delivery</span><span class="sk-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar" data-w="85%"></div></div><div class="sk-sub">Sprints · Code review · Documentation</div></div>
       </div>
     </div>
-
   </div>
-</section>
+</div>
 
 <!-- Projects -->
 <div class="sec fade-up" id="projects-sec">
   <div class="sec-label">Portfolio</div>
-  <h2 class="sec-title">Live Projects</h2>
-  <p class="sec-sub">Real-world products shipped and running in production.</p>
+  <h2 class="sec-title">Selected Projects</h2>
+  <p class="sec-sub">Systems shipped for real clients and companies.</p>
+  <div class="filter-row" id="filters">
+    <button class="chip active" data-f="all">All</button>
+    <button class="chip" data-f="enterprise">Enterprise</button>
+    <button class="chip" data-f="ecom">E-commerce</button>
+    <button class="chip" data-f="health">Healthcare</button>
+    <button class="chip" data-f="api">APIs &amp; Mobile</button>
+    <button class="chip" data-f="media">Media &amp; Education</button>
+  </div>
   <div class="proj-grid">
-    <div class="p-card">
-      <div class="p-header"><div class="p-num"><i class="fas fa-star"></i> 01 · Live App</div><div class="p-title">Aiwa — Service Marketplace</div><div class="p-desc">A freelancer-style mobile app where users register with services and get discovered by clients. Full payment flow via Fawry.</div></div>
-      <div class="p-footer"><span class="p-tag">CakePHP</span><span class="p-tag">REST API</span><span class="p-tag">Fawry</span></div>
+
+    <div class="p-card" data-cat="enterprise">
+      <div class="p-header"><div class="p-num">01 · Enterprise</div><div class="p-title">Modular ERP System</div>
+        <div class="p-desc">Multi-tenant ERP built with a module-based architecture for companies running on their own servers.</div>
+        <ul class="p-feats"><li>7 modules: HR, payroll, accounting, inventory…</li><li>Multi-tenancy &amp; granular role permissions</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">nwidart/modules</span><span class="p-tag">Spatie</span><span class="p-tag">MySQL</span></div>
     </div>
-    <div class="p-card">
-      <div class="p-header"><div class="p-num">02 · Enterprise</div><div class="p-title">ERP System</div><div class="p-desc">Custom ERP for a private company deployed on their servers. Handles workflows, records, and internal management.</div></div>
-      <div class="p-footer"><span class="p-tag">Native PHP</span><span class="p-tag">Laravel</span><span class="p-tag">SQL Server</span></div>
+
+    <div class="p-card" data-cat="health">
+      <div class="p-header"><div class="p-num">02 · Healthcare</div><div class="p-title">Hospital Management System</div>
+        <div class="p-desc">A large Laravel system covering the daily operations of a hospital across nine integrated modules.</div>
+        <ul class="p-feats"><li>Modular structure, one domain per module</li><li>Role-based access for every department</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">9 Modules</span></div>
     </div>
-    <div class="p-card">
-      <div class="p-header"><div class="p-num">03 · SaaS</div><div class="p-title">On Shop — Store Builder</div><div class="p-desc">A Shopify-like platform where users create and manage their own stores with multiple payment gateway integrations.</div></div>
+
+    <div class="p-card" data-cat="health">
+      <div class="p-header"><div class="p-num">03 · Healthcare · SaaS</div><div class="p-title">Asnanak — Dental Clinic System</div>
+        <div class="p-desc">Bilingual (Arabic / English) dental clinic management for adult and pediatric patients, with a modern, responsive UI.</div>
+        <ul class="p-feats"><li>Patients, appointments, treatments &amp; billing</li><li>Hardened, production-minded code</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel 12</span><span class="p-tag">Arabic / English</span><span class="p-tag">MySQL</span></div>
+    </div>
+
+    <div class="p-card" data-cat="health">
+      <div class="p-header"><div class="p-num">04 · Desktop &amp; Mobile</div><div class="p-title">Clinic App (NativePHP)</div>
+        <div class="p-desc">Clinic management application built with Laravel and NativePHP, targeting Android and Windows desktop from one codebase.</div></div>
+      <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">NativePHP</span><span class="p-tag">Android</span><span class="p-tag">Windows</span></div>
+    </div>
+
+    <div class="p-card" data-cat="media">
+      <div class="p-header"><div class="p-num">05 · E-learning</div><div class="p-title">Multi-Instructor Learning Platform</div>
+        <div class="p-desc">Marketplace-style e-learning platform where multiple instructors publish courses and earn commissions.</div>
+        <ul class="p-feats"><li>Protected video delivery with VdoCipher</li><li>Stripe payments, country-based pricing, commission splits</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">Stripe</span><span class="p-tag">VdoCipher</span></div>
+    </div>
+
+    <div class="p-card" data-cat="media">
+      <div class="p-header"><div class="p-num">06 · Streaming</div><div class="p-title">IPTV Platform</div>
+        <div class="p-desc">Streaming platform with an HLS player and a dark, Arabic RTL interface.</div></div>
+      <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">HLS.js</span><span class="p-tag">Video.js</span><span class="p-tag">RTL</span></div>
+    </div>
+
+    <div class="p-card" data-cat="ecom">
+      <div class="p-header"><div class="p-num">07 · E-commerce</div><div class="p-title">ZiZOSTORE — Clothing Storefront</div>
+        <div class="p-desc">Full Laravel 12 storefront inspired by Egyptian fashion stores, with an Arabic RTL UI and a complete admin panel.</div>
+        <ul class="p-feats"><li>COD-first checkout flow</li><li>Admin panel for products &amp; orders</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel 12</span><span class="p-tag">RTL</span><span class="p-tag">COD</span></div>
+    </div>
+
+    <div class="p-card" data-cat="ecom">
+      <div class="p-header"><div class="p-num">08 · SaaS</div><div class="p-title">On Shop — Store Builder</div>
+        <div class="p-desc">A Shopify-like platform where users create and manage their own stores with multiple payment gateways.</div></div>
       <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Multi-Payment</span></div>
     </div>
-    <div class="p-card">
-      <div class="p-header"><div class="p-num">04 · Mobile App</div><div class="p-title">Gym App — Kuwait Client</div><div class="p-desc">Gym management system for a Kuwaiti client, featuring member management, subscriptions, and Ottu payment gateway.</div></div>
+
+    <div class="p-card" data-cat="ecom">
+      <div class="p-header"><div class="p-num">09 · E-commerce</div><div class="p-title">WooCommerce Fashion Store</div>
+        <div class="p-desc">Fashion store set up and customized on WooCommerce for a client.</div></div>
+      <div class="p-footer"><span class="p-tag">WordPress</span><span class="p-tag">WooCommerce</span></div>
+    </div>
+
+    <div class="p-card" data-cat="enterprise">
+      <div class="p-header"><div class="p-num">10 · Lead Generation</div><div class="p-title">Recruitment Agency Platform (KSA)</div>
+        <div class="p-desc">Arabic RTL website for a Saudi domestic-worker recruitment agency, later rebuilt on Laravel with an admin panel for incoming leads.</div>
+        <ul class="p-feats"><li>AJAX contact form with SMTP notifications</li><li>Filament admin to review submitted leads</li></ul></div>
+      <div class="p-footer"><span class="p-tag">Laravel 12</span><span class="p-tag">Filament</span><span class="p-tag">RTL</span></div>
+    </div>
+
+    <div class="p-card" data-cat="api">
+      <div class="p-header"><div class="p-num">11 · API</div><div class="p-title">Mobile Authentication API</div>
+        <div class="p-desc">Versioned Laravel 12 API for mobile apps: signup/login with Sanctum tokens, Egyptian phone validation and consistent API responses.</div></div>
+      <div class="p-footer"><span class="p-tag">Laravel 12</span><span class="p-tag">Sanctum</span><span class="p-tag">REST</span></div>
+    </div>
+
+    <div class="p-card" data-cat="api">
+      <div class="p-header"><div class="p-num">12 · Mobile App</div><div class="p-title">Aiwa — Service Marketplace</div>
+        <div class="p-desc">Freelancer-style mobile app where users register services and get discovered by clients. Payments via Fawry.</div></div>
+      <div class="p-footer"><span class="p-tag">CakePHP</span><span class="p-tag">REST API</span><span class="p-tag">Fawry</span></div>
+    </div>
+
+    <div class="p-card" data-cat="api">
+      <div class="p-header"><div class="p-num">13 · Mobile App</div><div class="p-title">Gym App — Kuwait Client</div>
+        <div class="p-desc">Gym management with members, subscriptions and the Ottu payment gateway.</div></div>
       <div class="p-footer"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span class="p-tag">Ottu</span></div>
     </div>
-    <div class="p-card">
-      <div class="p-header"><div class="p-num">05 · Web App</div><div class="p-title">RiteVet — Vet Services</div><div class="p-desc">Full veterinarian service platform connecting pet owners with vets. Stripe payments and real-time availability.</div></div>
+
+    <div class="p-card" data-cat="health">
+      <div class="p-header"><div class="p-num">14 · Web App</div><div class="p-title">RiteVet — Vet Services</div>
+        <div class="p-desc">Platform connecting pet owners with veterinarians, with Stripe payments.</div></div>
       <div class="p-footer"><span class="p-tag">CakePHP</span><span class="p-tag">Laravel</span><span class="p-tag">Stripe</span></div>
     </div>
-    <div class="p-card">
-      <div class="p-header"><div class="p-num">06 · Open Source</div><div class="p-title">GitHub Projects</div><div class="p-desc">E-Commerce, Blog, Hotel Management, and Travel platforms available publicly on GitHub for review.</div></div>
-      <div class="p-footer"><a href="https://github.com/magedamer/Back-End-Projects" target="_blank" rel="noopener noreferrer" class="p-gh-link"><i class="fab fa-github"></i> View on GitHub →</a></div>
+
+  </div>
+</div>
+
+<!-- Project Links -->
+<div class="band" id="links-sec">
+  <div class="sec fade-up">
+    <div class="sec-label">Project Links</div>
+    <h2 class="sec-title">Code, Profiles &amp; Live Work</h2>
+    <p class="sec-sub">Everywhere you can review my code or hire me.</p>
+    <div class="links-grid">
+      <a class="link-card" href="https://github.com/magedamer/Back-End-Projects" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fab fa-github"></i></div>
+        <div><div class="link-t">Back-End Projects</div><div class="link-d">E-commerce, blog, hotel &amp; travel platforms</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      <a class="link-card" href="https://github.com/magedamer/MyPortfolio" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fas fa-user-astronaut"></i></div>
+        <div><div class="link-t">This Portfolio</div><div class="link-d">Source code of this website</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      <a class="link-card" href="https://github.com/magedamer" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fab fa-github-alt"></i></div>
+        <div><div class="link-t">GitHub Profile</div><div class="link-d">All repositories</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      <a class="link-card" href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fab fa-linkedin-in"></i></div>
+        <div><div class="link-t">LinkedIn</div><div class="link-d">Experience &amp; recommendations</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      <!-- Add your freelance profiles / live demos below. Copy a block and change href, title and description. -->
+      <!--
+      <a class="link-card" href="YOUR_MOSTAQL_PROFILE_URL" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fas fa-briefcase"></i></div>
+        <div><div class="link-t">Mostaql Profile</div><div class="link-d">Client reviews &amp; completed projects</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      <a class="link-card" href="YOUR_KHAMSAT_PROFILE_URL" target="_blank" rel="noopener">
+        <div class="link-ic"><i class="fas fa-store"></i></div>
+        <div><div class="link-t">Khamsat Services</div><div class="link-d">PHP / Laravel service listings</div></div>
+        <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+      </a>
+      -->
     </div>
   </div>
 </div>
@@ -444,121 +638,76 @@ footer span{color:var(--accent2);font-weight:600}
   </div>
 </div>
 
-<!-- Visitor Stats Banner -->
-<div id="visitor-stats-banner" class="fade-up">
-  <div class="vsb-inner">
-    <div>
-      <div class="vsb-label"><i class="fas fa-chart-line"></i>Portfolio Analytics</div>
-      <div class="vsb-title">Who's checking out my work?</div>
-    </div>
-    <div class="vsb-stats">
-      <div class="vsb-stat">
-        <div class="vsb-stat-num c-online" id="vsb-online">—</div>
-        <div class="vsb-online-row"><span class="vsb-pulse"></span><span style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent2)">live</span></div>
-        <div class="vsb-stat-label">Viewing now</div>
-      </div>
-      <div class="vsb-stat">
-        <div class="vsb-stat-num c-total" id="vsb-total">—</div>
-        <div class="vsb-stat-label">Total visits</div>
-      </div>
-      <div class="vsb-stat">
-        <div class="vsb-stat-num c-today" id="vsb-today">—</div>
-        <div class="vsb-stat-label">Today</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Contact -->
 <section id="contact-sec">
   <div class="contact-inner fade-up">
     <div class="contact-cta">
       <div class="sec-label">Connect</div>
       <h3>Let's build something<br>great together.</h3>
-      <p>Looking for a backend developer who ships production-ready code? I'm available for full-time roles and freelance projects.</p>
-      <a href="https://wa.me/201024827469?text=Hi%20Maged%2C%20I'm%20interested%20in%20collaborating." class="btn-glow" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Message on WhatsApp →</a>
+      <p>Looking for a developer who ships production-ready code? I'm available for full-time roles and freelance projects.</p>
+      <a href="https://wa.me/201024827469?text=Hi%20Maged%2C%20I'm%20interested%20in%20collaborating." class="btn-glow" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
     </div>
     <div class="contact-cards">
-      <a href="https://wa.me/201024827469?text=Hello%20Maged!" class="cc" target="_blank" rel="noopener">
-        <div class="cc-icon-box"><i class="fab fa-whatsapp fa-lg" style="color:#25D366"></i></div>
-        <div><div class="cc-label">WhatsApp (fastest)</div><div class="cc-val">+20 102 482 7469</div></div>
-      </a>
-      <a href="https://github.com/magedamer" target="_blank" class="cc" rel="noopener">
-        <div class="cc-icon-box"><i class="fab fa-github"></i></div>
-        <div><div class="cc-label">GitHub</div><div class="cc-val">github.com/magedamer</div></div>
-      </a>
-      <a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" target="_blank" class="cc" rel="noopener">
-        <div class="cc-icon-box"><i class="fab fa-linkedin-in"></i></div>
-        <div><div class="cc-label">LinkedIn</div><div class="cc-val">Maged Ahmed Amer</div></div>
-      </a>
-      <div class="cc">
-        <div class="cc-icon-box"><i class="fas fa-map-marker-alt"></i></div>
-        <div><div class="cc-label">Location</div><div class="cc-val">Cairo, Egypt 🇪🇬</div></div>
-      </div>
+      <a href="https://wa.me/201024827469?text=Hello%20Maged!" class="cc" target="_blank" rel="noopener"><div class="cc-icon-box"><i class="fab fa-whatsapp" style="color:#25D366"></i></div><div><div class="cc-label">WhatsApp (fastest)</div><div class="cc-val">+20 102 482 7469</div></div></a>
+      <a href="https://github.com/magedamer" class="cc" target="_blank" rel="noopener"><div class="cc-icon-box"><i class="fab fa-github"></i></div><div><div class="cc-label">GitHub</div><div class="cc-val">github.com/magedamer</div></div></a>
+      <a href="https://www.linkedin.com/in/maged-ahmed-amer-23236911a/" class="cc" target="_blank" rel="noopener"><div class="cc-icon-box"><i class="fab fa-linkedin-in"></i></div><div><div class="cc-label">LinkedIn</div><div class="cc-val">Maged Ahmed Amer</div></div></a>
+      <div class="cc"><div class="cc-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="cc-label">Location</div><div class="cc-val">Egypt 🇪🇬</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <p>Built with <i class="fas fa-heart" style="color:#00e5a0"></i> by <span>Maged Ahmed Amer</span> · Senior Back-End Developer · 5+ years of excellence · <i class="fab fa-whatsapp"></i> WhatsApp preferred</p>
-</footer>
+<footer><p>Built by <span>Maged Ahmed Amer</span> · Senior Software Engineer · PHP &amp; Laravel</p></footer>
 
 <script>
-/* ── Visitor Counter ────────────────────────────────────────────────────
-   localStorage tracks total & daily visits across page loads.
-   sessionStorage ensures one count per browser session only.
-   "Online now" is simulated — replace randomOnline() with a fetch()
-   to your Laravel/Redis endpoint for real-time accuracy on a hosted site.
-──────────────────────────────────────────────────────────────────────── */
-(function () {
-  var TOTAL_KEY   = 'maged_portfolio_total';
-  var TODAY_KEY   = 'maged_portfolio_today_' + new Date().toDateString();
-  var SESSION_KEY = 'maged_portfolio_session';
+/* Mobile menu */
+var navLinks=document.getElementById('navLinks');
+document.getElementById('menuBtn').addEventListener('click',function(){navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
 
-  var isNew = !sessionStorage.getItem(SESSION_KEY);
-  var total = parseInt(localStorage.getItem(TOTAL_KEY) || '0', 10);
-  var today = parseInt(localStorage.getItem(TODAY_KEY) || '0', 10);
+/* Project filters */
+var chips=document.querySelectorAll('#filters .chip'),cards=document.querySelectorAll('.p-card');
+chips.forEach(function(c){c.addEventListener('click',function(){
+  chips.forEach(function(x){x.classList.remove('active')});c.classList.add('active');
+  var f=c.getAttribute('data-f');
+  cards.forEach(function(p){p.classList.toggle('hide',f!=='all'&&p.getAttribute('data-cat')!==f)});
+})});
 
-  if (isNew) {
-    total += 1;
-    today += 1;
-    localStorage.setItem(TOTAL_KEY, total);
-    localStorage.setItem(TODAY_KEY, today);
-    sessionStorage.setItem(SESSION_KEY, '1');
-  }
-
-  function randomOnline() { return 1 + Math.floor(Math.random() * 5); }
-  var online = randomOnline();
-
-  function render() {
-    var t  = parseInt(localStorage.getItem(TOTAL_KEY) || total, 10);
-    var d  = parseInt(localStorage.getItem(TODAY_KEY) || today, 10);
-    var eO = document.getElementById('vsb-online');
-    var eT = document.getElementById('vsb-total');
-    var eD = document.getElementById('vsb-today');
-    if (eO) eO.textContent = online;
-    if (eT) eT.textContent = t.toLocaleString();
-    if (eD) eD.textContent = d.toLocaleString();
-  }
-
-  render();
-  setInterval(function () { online = randomOnline(); render(); }, 30000);
-}());
-
-/* ── Scroll-triggered animations + skill bar fill ── */
-var obs = new IntersectionObserver(function (entries) {
-  entries.forEach(function (e) {
-    if (!e.isIntersecting) return;
+/* Scroll animations + skill bars */
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting)return;
     e.target.classList.add('visible');
-    e.target.querySelectorAll('.sk-bar').forEach(function (b) {
-      var w = b.getAttribute('data-w');
-      if (w) b.style.width = w;
-    });
+    e.target.querySelectorAll('.sk-bar').forEach(function(b){var w=b.getAttribute('data-w');if(w)b.style.width=w});
   });
-}, { threshold: 0.1 });
+},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el)});
 
-document.querySelectorAll('.fade-up').forEach(function (el) { obs.observe(el); });
+/* Theme toggle */
+var root=document.documentElement,themeBtn=document.getElementById('themeBtn');
+function syncIcon(){var l=root.getAttribute('data-theme')==='light';themeBtn.innerHTML='<i class="fas '+(l?'fa-sun':'fa-moon')+'"></i>'}
+syncIcon();
+themeBtn.addEventListener('click',function(){
+  var next=root.getAttribute('data-theme')==='light'?'dark':'light';
+  root.setAttribute('data-theme',next);
+  try{localStorage.setItem('theme',next)}catch(e){}
+  syncIcon();
+});
+
+/* Scroll progress */
+var bar=document.getElementById('progress');
+window.addEventListener('scroll',function(){
+  var d=document.documentElement;
+  bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+},{passive:true});
+
+/* Card spotlight follows cursor */
+document.querySelectorAll('.fact,.svc,.sk-card,.p-card,.link-card,.tr-card,.cc,.exp-item').forEach(function(el){
+  el.addEventListener('mousemove',function(e){
+    var r=el.getBoundingClientRect();
+    el.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    el.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
 </script>
 </body>
 </html>
